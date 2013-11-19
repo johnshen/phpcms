@@ -1,4 +1,4 @@
 phpcms
 ======
 
-对PHPCMS V9进行二次开发，BUG修改
+阅读理解PHPCMS V9, BUG修改
