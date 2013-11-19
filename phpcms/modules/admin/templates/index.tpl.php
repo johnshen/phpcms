@@ -38,7 +38,7 @@ var pc_hash = '<?php echo $_SESSION['pc_hash']?>'
 </style>
 </head>
 <body scroll="no" class="objbody">
-<div class="btns btns2" id="btnx">
+<!-- div class="btns btns2" id="btnx">
 <div class="bg_btn"></div>
 <?php $model_types = pc_base::load_config('model_config');?>
 <h6><?php echo L('panel_switch');?></h6>
@@ -48,7 +48,7 @@ var pc_hash = '<?php echo $_SESSION['pc_hash']?>'
 		<li onclick="_Site_M('<?php echo $mt;?>');"><span><?php echo $mn;?></span></li>
 		<?php } }?>
 	</ul>
-</div>
+</div -->
 <div id="dvLockScreen" class="ScreenLock" style="display:<?php if(isset($_SESSION['lock_screen']) && $_SESSION['lock_screen']==0) echo 'none';?>">
     <div id="dvLockScreenWin" class="inputpwd">
     <h5><b class="ico ico-info"></b><span id="lock_tips"><?php echo L('lockscreen_status');?></span></h5>
@@ -60,20 +60,20 @@ var pc_hash = '<?php echo $_SESSION['pc_hash']?>'
 <div class="header">
 	<div class="logo lf"><a href="<?php echo $currentsite['domain']?>" target="_blank"><span class="invisible"><?php echo L('phpcms_title')?></span></a></div>
     <div class="rt-col">
-    	<div class="tab_style white cut_line text-r"><a href="javascript:;" onclick="lock_screen()"><img src="<?php echo IMG_PATH.'icon/lockscreen.png'?>"> <?php echo L('lockscreen')?></a><span>|</span><a href="http://www.phpcms.cn" target="_blank">PHPCMS</a><span>|</span><a href="http://www.phpcms.cn/license/license.php" target="_blank"><?php echo L('authorization')?></a><span>|</span><a href="http://bbs.phpcms.cn" target="_blank"><?php echo L('igenus_for_postfix')?></a><span>|</span><a href="http://v9.help.phpcms.cn/" target="_blank"><?php echo L('help')?></a>
-    <ul id="Skin">
+    	<div class="tab_style white cut_line text-r"><a href="javascript:;" onclick="lock_screen()"><img src="<?php echo IMG_PATH.'icon/lockscreen.png'?>"> <?php echo L('lockscreen')?></a>
+    <!-- ul id="Skin">
 		<li class="s1 styleswitch" rel="styles1"></li>
 		<li class="s2 styleswitch" rel="styles2"></li>
 		<li class="s3 styleswitch" rel="styles3"></li>
         <li class="s4 styleswitch" rel="styles4"></li>
-	</ul>
+	</ul -->
         </div>
     </div>
     <div class="col-auto">
     	<div class="log white cut_line"><?php echo L('hello'),$admin_username?>  [<?php echo $rolename?>]<span>|</span><a href="?m=admin&c=index&a=public_logout">[<?php echo L('exit')?>]</a><span>|</span>
-    		<a href="<?php echo $currentsite['domain']?>" target="_blank" id="site_homepage"><?php echo L('site_homepage')?></a><span>|</span>
-    		<a href="?m=member" target="_blank"><?php echo L('member_center')?></a><span>|</span>
-    		<a href="?m=search" target="_blank" id="site_search"><?php echo L('search')?></a>
+    		<a href="<?php echo $currentsite['domain']?>" target="_blank" id="site_homepage"><?php echo L('site_homepage')?></a><!-- span>|</span -->
+    		<!-- a href="?m=member" target="_blank"><?php echo L('member_center')?></a><span>|</span -->
+    		<!-- a href="?m=search" target="_blank" id="site_search"><?php echo L('search')?></a -->
     	</div>
         <ul class="nav white" id="top_menu">
         <?php
@@ -103,7 +103,7 @@ var pc_hash = '<?php echo $_SESSION['pc_hash']?>'
         </div>
     <div class="col-auto mr8">
     <div class="crumbs">
-    <div class="shortcut cu-span"><a href="?m=content&c=create_html&a=public_index&pc_hash=<?php echo $_SESSION['pc_hash'];?>" target="right"><span><?php echo L('create_index')?></span></a><a href="?m=admin&c=cache_all&a=init&pc_hash=<?php echo $_SESSION['pc_hash'];?>" target="right"><span><?php echo L('update_backup')?></span></a><a href="javascript:art.dialog({id:'map',iframe:'?m=admin&c=index&a=public_map', title:'<?php echo L('background_map')?>', width:'700', height:'500', lock:true});void(0);"><span><?php echo L('background_map')?></span></a><?php echo runhook('admin_top_left_menu')?></div>
+    <div class="shortcut cu-span"><a href="?m=content&c=create_html&a=public_index&pc_hash=<?php echo $_SESSION['pc_hash'];?>" target="right"><span><?php echo L('create_index')?></span></a><a href="?m=admin&c=cache_all&a=init&pc_hash=<?php echo $_SESSION['pc_hash'];?>" target="right"><span><?php echo L('update_backup')?></span></a><!-- a href="javascript:art.dialog({id:'map',iframe:'?m=admin&c=index&a=public_map', title:'<?php echo L('background_map')?>', width:'700', height:'500', lock:true});void(0);"><span><?php echo L('background_map')?></span></a --><?php echo runhook('admin_top_left_menu')?></div>
     <?php echo L('current_position')?><span id="current_pos"></span></div>
     	<div class="col-1">
         	<div class="content" style="position:relative; overflow:hidden">
@@ -307,32 +307,32 @@ function _MP(menuid,targetUrl) {
 		$("#current_pos").html(data+'<span id="current_pos_attr"></span>');
 	});
 	$("#current_pos").data('clicknum', 1);
-	show_help(targetUrl);
+	//show_help(targetUrl);
 }
 
-function show_help(targetUrl) {
-	$("#help").slideUp("slow");
-	var str = '';
-	$.getJSON("http://v9.help.phpcms.cn/api.php?jsoncallback=?",{op:'help',targetUrl: targetUrl},
-	function(data){
-		if(data!=null) {
-			$("#help").slideDown("slow");
-			$.each(data, function(i,item){
-				str += '<a href="'+item.url+'" target="_blank">'+item.title+'</a>';
-			});
-			
-			str += '<a class="panel-delete" href="javascript:;" onclick="$(\'#help\').slideUp(\'slow\')"></a>';
-			$('#help').html(str);
-		}
-	});
-	$("#help").data('time', 1);
-}
-setInterval("hidden_help()", 30000);
-function hidden_help() {
-	var htime = $("#help").data('time')+1;
-	$("#help").data('time', htime);
-	if(htime>2) $("#help").slideUp("slow");
-}
+//function show_help(targetUrl) {
+//	$("#help").slideUp("slow");
+//	var str = '';
+//	$.getJSON("http://v9.help.phpcms.cn/api.php?jsoncallback=?",{op:'help',targetUrl: targetUrl},
+//	function(data){
+//		if(data!=null) {
+//			$("#help").slideDown("slow");
+//			$.each(data, function(i,item){
+//				str += '<a href="'+item.url+'" target="_blank">'+item.title+'</a>';
+//			});
+//			
+//			str += '<a class="panel-delete" href="javascript:;" onclick="$(\'#help\').slideUp(\'slow\')"></a>';
+//			$('#help').html(str);
+//		}
+//	});
+//	$("#help").data('time', 1);
+//}
+//setInterval("hidden_help()", 30000);
+//function hidden_help() {
+//	var htime = $("#help").data('time')+1;
+//	$("#help").data('time', htime);
+//	if(htime>2) $("#help").slideUp("slow");
+//}
 function add_panel() {
 	var menuid = $("#menuid").val();
 	$.ajax({

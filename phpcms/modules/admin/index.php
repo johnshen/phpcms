@@ -158,7 +158,7 @@ class index extends admin {
 	}
 	//当前位置
 	public function public_current_pos() {
-		echo admin::current_pos($_GET['menuid']);
+		echo trim(admin::current_pos($_GET['menuid']), ' > ');
 		exit;
 	}
 	
@@ -197,8 +197,7 @@ class index extends admin {
 	public function public_main() {
 		pc_base::load_app_func('global');
 		pc_base::load_app_func('admin');
-		//define('PC_VERSION', pc_base::load_config('version','pc_version'));
-		define('PC_VERSION', 1);
+		define('PC_VERSION', pc_base::load_config('version','pc_version'));
 		define('PC_RELEASE', pc_base::load_config('version','pc_release'));	
 	
 		$admin_username = param::get_cookie('admin_username');
