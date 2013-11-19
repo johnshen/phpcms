@@ -6,7 +6,7 @@ translation save at the array:$LANG
 */
 
 $LANG['no_language'] = 'Lack of language pack';
-$LANG['website_manage'] = 'phpcmsV9 - Administration';
+$LANG['website_manage'] = 'Administration';
 $LANG['lockscreen'] = 'Screen lock';
 $LANG['submit'] = 'Submit';
 $LANG['yes'] = 'Yes';
@@ -38,7 +38,7 @@ $LANG['Wednesday'] = 'Wednesday';
 $LANG['Thursday'] = 'Thursday';
 $LANG['Friday'] = 'Friday';
 $LANG['Saturday'] = 'Saturday';
-$LANG['admin_login'] = 'PHPCMS Administration';
+$LANG['admin_login'] = 'Administration';
 $LANG['add'] = 'Add';
 $LANG['edit'] = 'Edit';
 $LANG['delete'] = 'Delete';

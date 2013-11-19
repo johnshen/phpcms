@@ -658,7 +658,7 @@ $LANG['default_style'] = 'Default style';
 
 $LANG['your_server_it_may_not_have_access_to'] = 'Could not able to access your server.';
 $LANG['_please_check_the_server_configuration'] = ', please check your server configuration';
-$LANG['phpcms_logon'] = 'PHPCMS login';
+$LANG['phpcms_logon'] = 'login';
 $LANG['please_input_your_password_the_picture_corresponding_location_6_digits'] = 'Please input 6 digits number corresponding to picture in smart electronic password card.';
 $LANG['ht_card'] = 'Smart electronic password card';
 $LANG['apply_for_a_password_card'] = 'Apply';
