@@ -6,5 +6,6 @@ return array (
   'announce' => '公告',
   'link' => '友情链接',
   'vote' => '投票',
+  'custom' => '客户',
 );
 ?>
