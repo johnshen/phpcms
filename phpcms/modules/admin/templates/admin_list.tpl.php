@@ -9,7 +9,9 @@ include $this->admin_tpl('header');?>
 		<tr>
 		<th width="10%"><?php echo L('userid')?></th>
 		<th width="10%" align="left" ><?php echo L('username')?></th>
+        <?php if ($_SESSION['roleid'] == 1) { ?>
 		<th width="10%" align="left" ><?php echo L('userinrole')?></th>
+        <?php } ?>
 		<th width="10%"  align="left" ><?php echo L('lastloginip')?></th>
 		<th width="20%"  align="left" ><?php echo L('lastlogintime')?></th>
 		<th width="15%"  align="left" ><?php echo L('email')?></th>
@@ -26,7 +28,9 @@ if(is_array($infos)){
 <tr>
 <td width="10%" align="center"><?php echo $info['userid']?></td>
 <td width="10%" ><?php echo $info['username']?></td>
+<?php if ($_SESSION['roleid'] == 1) { ?>
 <td width="10%" ><?php echo $roles[$info['roleid']]?></td>
+<?php } ?>
 <td width="10%" ><?php echo $info['lastloginip']?></td>
 <td width="20%"  ><?php echo $info['lastlogintime'] ? date('Y-m-d H:i:s',$info['lastlogintime']) : ''?></td>
 <td width="15%"><?php echo $info['email']?></td>

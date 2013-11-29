@@ -103,6 +103,10 @@ if(is_array($forminfos['base'])) {
 <!--
 //只能放到最下面
 var openClose = $("#RopenClose"), rh = $(".addContent .col-auto").height(),colRight = $(".addContent .col-right"),valClose = getcookie('openClose');
+
+valClose = 1;
+openClose.css({'display':'none'});
+
 $(function(){
 	if(valClose==1){
 		colRight.hide();

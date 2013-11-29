@@ -58,7 +58,7 @@ function open_list(obj) {
 <?php
  if($_GET['from']=='block') {
 ?>
-<ul class="filetree  treeview"><li class="collapsable"><div class="hitarea collapsable-hitarea"></div><span><img src="<?php echo IMG_PATH.'icon/home.png';?>" width="15" height="14">&nbsp;<a href='?m=block&c=block_admin&a=public_visualization&type=index' target='right'><?php echo L('block_site_index');?></a></span></li></ul>
+<ul class="filetree  treeview"><!-- li class="collapsable"><div class="hitarea collapsable-hitarea"></div><span><img src="<?php echo IMG_PATH.'icon/home.png';?>" width="15" height="14">&nbsp;<a href='?m=block&c=block_admin&a=public_visualization&type=index' target='right'><?php echo L('block_site_index');?></a></span></li--></ul>
 <?php } else { ?>
-<ul class="filetree  treeview"><li class="collapsable"><div class="hitarea collapsable-hitarea"></div><span><img src="<?php echo IMG_PATH.'icon/box-exclaim.gif';?>" width="15" height="14">&nbsp;<a href='?m=content&c=content&a=public_checkall&menuid=822' target='right'><?php echo L('checkall_content');?></a></span></li></ul>
+<ul class="filetree  treeview"><!-- li class="collapsable"><div class="hitarea collapsable-hitarea"></div><span><img src="<?php echo IMG_PATH.'icon/box-exclaim.gif';?>" width="15" height="14">&nbsp;<a href='?m=content&c=content&a=public_checkall&menuid=822' target='right'><?php echo L('checkall_content');?></a></span></li --></ul>
 <?php } echo $categorys; ?>

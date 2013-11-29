@@ -60,7 +60,7 @@ $(function(){
 <input type="text" name="info[realname]" value="" class="input-text" id="realname"></input>
 </td>
 </tr>
-<tr>
+<tr style="display: none">
 <td><?php echo L('userinrole')?></td>
 <td>
 <select name="info[roleid]">

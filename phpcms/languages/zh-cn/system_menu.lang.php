@@ -454,4 +454,7 @@ $LANG['complete_info'] = '填写资料';
 $LANG['clear_data'] = '一键清理';
 $LANG['player_manage'] = '播放器管理';
 $LANG['video_upload'] = '视频上传'; 
+$LANG['LegalAdvice'] = '法律諮詢';
+$LANG['LegalAdvice'] = '法律諮詢 ';
+$LANG['legal_advice'] = '法律咨询';
 ?>
