@@ -3,22 +3,29 @@
 	color: #121718;
 	display: block;
 	line-height: 30px;
-	margin:0px 60px 30px 60px;
+	margin:0px 60px 0px 60px;
 }
 
 .page-panel .title{
 	width: 172px;
 	height: 54px;
 	line-height: 54px;
+	margin-top: 7px;
 	cursor: pointer;
 	display: inline-block;
 	text-align: left;
+	font-size: 0px;
 }
 
 .page-panel .table{
 	height: 70px;
 	line-height: 70px;
 	text-align: center;
+}
+
+.page-panel .name{
+	margin-left: 6px;
+	font-size: 16px;
 }
 
 .page-panel .label{
@@ -40,6 +47,7 @@
 	margin-left: 35px;
 	position: relative;
 	top: -2px;
+	*top:-4px;
 	display: inline-block;
 }
 
@@ -62,7 +70,7 @@
 .page-panel .content-line{
 	border-left:1px solid #CBD3D3;
 	height: 300px;
-	display: inline-block; 
+	float: left;
 }
 
 .page-panel .type{

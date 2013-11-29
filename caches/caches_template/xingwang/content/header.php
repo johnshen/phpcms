@@ -17,27 +17,36 @@
 <link href="<?php echo CSS_PATH;?>xingwang/music.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.min.js"></script>
-<!-- style type="text/css">
-.page-tip .music-off{
-	background:url(<?php echo IMG_PATH;?>xingwang/music_off.jpg);
-}
-.page-tip .music-about{
-	background:url(<?php echo IMG_PATH;?>xingwang/music_about.jpg);
-}
-.page-music .logo{
-	background: url(<?php echo IMG_PATH;?>xingwang/music.png) center top;
-}
-.page-music .title{
-	background: url(<?php echo IMG_PATH;?>xingwang/title.png) center top;
-}
-.page-music .pic{
-	background: url(<?php echo IMG_PATH;?>xingwang/pic.png);
-}
-</style -->
+<script type="text/javascript" src="<?php echo JS_PATH;?>xingwang/common.js"></script>
+<style type="text/css">
+	.page-header{
+		background:url(<?php echo IMG_PATH;?>xingwang/header.png) center center;
+		background-repeat: no-repeat;
+	}
+
+	.page-container .wrap-left{
+		background: url(<?php echo IMG_PATH;?>xingwang/left.png); 
+		background-repeat:no-repeat;
+	}
+
+	.page-container .wrap-right{
+		background: url(<?php echo IMG_PATH;?>xingwang/right.png); 
+		background-repeat:no-repeat;
+	}
+
+	.page-container .wrap-top{
+		background: url(<?php echo IMG_PATH;?>xingwang/top.png) center center; 
+		background-repeat:no-repeat;
+	}
+
+	.page-container .wrap{
+		background: url(<?php echo IMG_PATH;?>xingwang/content_bg.png);
+	}
+</style>
 </head>
 <body>
 	<div id="pageIndex" class="page-index">
-		<div id="pageHeader" class="page-header" style="background:url(<?php echo IMG_PATH;?>xingwang/header.png) center center;">
+		<div id="pageHeader" class="page-header">
 			<div class="wrap">					
 				<ul>
 					<?php $key = 0?>
@@ -53,11 +62,11 @@
 			</div>
 		</div>
 		<div id="pageContainer" class="page-container">
-			<div class="wrap-left" style="background: url(<?php echo IMG_PATH;?>xingwang/left.png); background-repeat:no-repeat"></div>
-			<div class="wrap-right" style="background: url(<?php echo IMG_PATH;?>xingwang/right.png);background-repeat:no-repeat"></div>
+			<div class="wrap-left"></div>
+			<div class="wrap-right"></div>
 			<div class="wrap">
 				<div id="pageNav" class="page-nav">
 					<span class="title"><?php echo $catname;?></span>					
 					<span class="label"><a href="<?php echo siteurl($siteid);?>">Home</a>><?php echo substr(catpos($catid, '>'), 0, -1);?>
 				</div>
-				<div class="wrap-top" style="background: url(<?php echo IMG_PATH;?>xingwang/top.png) center center;background-repeat:no-repeat"></div>
+				<div class="wrap-top"></div>
