@@ -457,4 +457,8 @@ $LANG['video_upload'] = '视频上传';
 $LANG['LegalAdvice'] = '法律諮詢';
 $LANG['LegalAdvice'] = '法律諮詢 ';
 $LANG['legal_advice'] = '法律咨询';
+$LANG['news'] = '最新消息';
+$LANG['xingwang_news'] = '最新消息';
+$LANG['custom_news'] = '最新消息';
+$LANG['custom_news'] = '最新消息';
 ?>

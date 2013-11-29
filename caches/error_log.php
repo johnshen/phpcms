@@ -127,3 +127,30 @@
 <?php exit;?>11-29 21:58:31 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms\libs\classes\mysql.class.php | 392
 <?php exit;?>11-29 21:58:31 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms\libs\classes\mysql.class.php | 392
 <?php exit;?>11-29 21:58:31 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms\libs\classes\mysql.class.php | 388
+<?php exit;?>11-29 22:56:28 | 2 | mysql_connect(): [2002] No such file or directory (trying to connect via unix:///tmp/mysql.sock) | phpcms/libs/classes/mysql.class.php | 56
+<?php exit;?>11-29 22:56:28 | 2 | mysql_connect(): No such file or directory | phpcms/libs/classes/mysql.class.php | 56
+<?php exit;?>11-29 22:56:28 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-29 22:56:28 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-29 22:56:28 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-29 22:56:28 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-29 22:56:28 | 2 | mysql_connect(): [2002] No such file or directory (trying to connect via unix:///tmp/mysql.sock) | phpcms/libs/classes/mysql.class.php | 56
+<?php exit;?>11-29 22:56:28 | 2 | mysql_connect(): No such file or directory | phpcms/libs/classes/mysql.class.php | 56
+<?php exit;?>11-29 22:56:28 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-29 22:56:28 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-29 22:56:28 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-29 22:56:28 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-29 22:56:52 | 2 | mysql_connect(): [2002] No such file or directory (trying to connect via unix:///tmp/mysql.sock) | phpcms/libs/classes/mysql.class.php | 56
+<?php exit;?>11-29 22:56:52 | 2 | mysql_connect(): No such file or directory | phpcms/libs/classes/mysql.class.php | 56
+<?php exit;?>11-29 22:56:52 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-29 22:56:52 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-29 22:56:52 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-29 22:56:52 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-29 22:57:38 | 2 | mysql_connect(): [2002] No such file or directory (trying to connect via unix:///tmp/mysql.sock) | phpcms/libs/classes/mysql.class.php | 56
+<?php exit;?>11-29 22:57:38 | 2 | mysql_connect(): No such file or directory | phpcms/libs/classes/mysql.class.php | 56
+<?php exit;?>11-29 22:57:38 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-29 22:57:38 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-29 22:57:38 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-29 22:57:38 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-29 23:27:41 | 2 | extract() expects parameter 1 to be array, string given | phpcms/modules/formguide/formguide.php | 243
+<?php exit;?>11-29 23:47:30 | 2 | array_map(): Argument #2 should be an array | phpcms/modules/custom/admin_news.php | 73
+<?php exit;?>11-29 23:47:38 | 2 | array_map(): Argument #2 should be an array | phpcms/modules/custom/admin_news.php | 73

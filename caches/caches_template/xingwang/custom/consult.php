@@ -66,7 +66,7 @@
 									<span class="warn">*请输入右方图片所显示的文字</span>
 								</span>
 								<!-- image class="code-image" src="images/code.png"></image-->
-                                <?php echo form::checkcode(); ?>
+                                <?php echo form::checkcode('checkcode', 5, 20, 130, 50, '', '', '', 'code-image'); ?>
 							</div>
 							<div class="item send-item">
 								<input class="send" type="submit" value='送&nbsp;&nbsp;&nbsp;&nbsp;出' id="dosubmit" name="dosubmit">
