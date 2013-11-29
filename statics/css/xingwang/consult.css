@@ -1,0 +1,103 @@
+.page-panel{
+	width: 560px;
+	display: block;
+	margin: auto;
+}
+
+.page-panel .desc{
+	display: inline-block;
+	width: 100%;
+	font-size: 14px;
+	line-height: 25px;
+	margin-top: 35px;
+}
+
+.page-panel .item{
+	font-size: 0px;
+	display: inline-block;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.page-panel .user-text{
+	font-size: 14px;
+}
+
+.page-panel .user-sex{
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.page-panel .user-input{
+	margin-left: 10px;
+	width:330px; 
+}
+
+.page-panel .user-input-name,
+.page-panel .user-input-code{
+	margin-left: 10px;
+	width: 150px;
+}
+
+.page-panel .content{
+	margin: auto;
+	display: block;
+	width: 505px;
+}
+
+.page-panel .warn{
+	font-size: 14px;
+	margin-top: 7px;
+	display: block;
+}
+
+.page-panel .user-radio{
+	margin-left: 15px;
+}
+
+.page-panel .radio-icon{
+	margin-left: 10px;
+}
+
+.page-panel .user-time{
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+.page-panel .consult-time,
+.page-panel .consult-content{
+	vertical-align: top;
+}
+
+.page-panel .container{
+	width: 300px;
+	display: inline-block;
+}
+
+.page-panel .user-textarea{
+	margin-left: 10px;
+	width: 437px;
+	*width: 436px;
+	height: 138px;
+}
+
+.page-panel .code-panel{
+	vertical-align: top;
+	display: inline-block;
+}
+
+.page-panel .code-image{
+	margin-left: 23px;
+}
+
+.page-panel .send-item{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.page-panel .send{
+	width: 104px;
+	height: 34px;
+	text-align: center;
+	font-size: 14px;
+}

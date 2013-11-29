@@ -1,0 +1,31 @@
+.page-panel{
+	font-size: 16px;
+	color: #121718;
+	width: 390px;
+	height: 360px;
+	display: block;
+	line-height: 30px;
+	margin:30px auto 30px auto;
+}
+
+.page-panel li{
+	font-size: 0px;
+}
+
+.page-panel .num{
+	font-size: 24px;
+	font-weight: bolder;
+	color: #57678C;
+}
+
+.page-panel .title{
+	font-size: 24px;
+	margin-left: 15px;
+	color: #57678C;
+}
+
+.page-panel .detail{
+	font-size: 14px;
+	display: inline-block;
+	margin-left: 45px;
+}

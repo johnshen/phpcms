@@ -1,0 +1,57 @@
+.page-header{
+	background-repeat:no-repeat;
+	width: 100%;
+	color: #646464;
+	height: 185px;
+}
+
+.page-header .wrap{
+	width: 858px;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	margin: auto;
+	position: relative;
+	top: 95px;
+}
+
+.page-header ul{
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -420px;
+	font-size: 18px;
+}
+
+.page-header a{
+	color: #646464;
+}
+
+.page-header ul li{
+	float: left;
+	cursor: pointer;
+}
+
+.page-header a{
+	color: #646464;
+}
+
+.page-header a:hover{
+	color: #8D419C;
+}
+
+.page-header .active{
+	color: #8D419C;
+}
+
+.page-header .left{
+	margin-right: 38px;
+}
+
+.page-header .right{
+	margin-left: 38px;
+}
+
+.page-header .first{
+	margin-left: 240px;
+}

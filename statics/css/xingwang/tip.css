@@ -1,0 +1,22 @@
+.page-tip{
+	position: absolute;
+	top: 0px;
+	right: -85px;
+	width: 68px;
+}
+
+.page-tip .music-off{
+	height: 64px;
+	width: 68px;
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	right: 1px;
+}
+
+.page-tip .music-about{
+	height: 65px;
+	width: 68px;
+	display: inline-block;
+	cursor: pointer;
+}

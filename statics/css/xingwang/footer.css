@@ -1,0 +1,58 @@
+.page-footer{
+	width: 1024px;
+	height: 85px;
+	color:#5F666C;
+	position: fixed;
+	bottom: 0px;
+}
+
+.page-footer .panel{
+	margin-top:12px;
+}
+
+.page-footer span{
+	display: inline-block;
+	margin-left: 11px;
+}
+
+.page-footer .first{
+	margin-left: 0px;
+}
+
+.page-footer .address a{
+	color: #7379BE;
+	border-bottom:1px solid #7379BE;
+	padding-bottom:1px;
+	cursor: pointer;
+}
+
+.page-footer .wrap{
+	width: 858px;
+	height: 105px;
+	display: block;
+	margin: auto;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.page-footer .location{
+	width: 14px;
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	height: 23px;
+	background-repeat: no-repeat;
+}
+
+.page-footer .icon{
+	display: inline-block;
+	width: 30px;
+	position: relative;
+	top: 8px;
+	height: 27px;
+	cursor: pointer;
+}
+
+.page-footer p a{
+	color:#5F666C;
+}

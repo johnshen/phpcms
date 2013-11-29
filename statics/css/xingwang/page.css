@@ -1,0 +1,47 @@
+.page-index{
+	display: block;
+	width: 1024px;
+	height: 100%;
+	margin: auto;
+}
+
+.page-container{
+	width: 100%;
+	min-height: 538px;
+	position: relative;
+	padding-bottom: 85px;
+}
+
+.page-container .wrap{
+	width: 858px;
+	min-height: 560px;
+	display: block;
+	margin: auto;
+	position: relative;
+}
+
+.page-container .wrap-left{
+	width: 20px;
+	height: 100%;
+	position: absolute;
+	left: 50px;
+	top: 0px;
+}
+
+.page-container .wrap-right{
+	width: 20px;
+	height: 100%;
+	position: absolute;
+	right: 50px;
+	top: 0px;
+}
+
+.page-container .wrap-bottom{
+	height: 19px;
+	width: 100%;
+}
+
+.page-container .wrap-top{
+	height: 14px;
+	width: 100%;
+}
