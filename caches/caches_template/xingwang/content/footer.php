@@ -53,6 +53,26 @@
 		background:url(<?php echo IMG_PATH;?>xingwang/ping.png);
 		background-repeat: no-repeat;
 	}
+
+	.ui-widget-content {
+		background:url(<?php echo IMG_PATH;?>xingwang/music_bg.png) center center repeat-x;
+	}
+
+	.ui-slider-horizontal{
+		background:url(<?php echo IMG_PATH;?>xingwang/music_line.png) center center repeat-x;
+	}
+
+	.ui-icon-play{
+		background:url(<?php echo IMG_PATH;?>xingwang/play.png) center center no-repeat;
+	}
+
+	.ui-icon-pause{
+		background:url(<?php echo IMG_PATH;?>xingwang/pause.png) center center no-repeat;
+	}
+
+	.ui-slider .ui-slider-handle{
+		background:url(<?php echo IMG_PATH;?>xingwang/music_buttom.png) center center repeat-x;
+	}
 </style>
 
 				<div id="pageTip" class="page-tip">
@@ -112,15 +132,16 @@
 					</span>
 				</div>
 				<div class="right">
-					<div class="jp-gui ui-widget ui-widget-content ui-corner-all">
-						<ul>
-							<li class="jp-play ui-state-default ui-corner-all" style="display: list-item;"><a href="javascript:;" class="jp-play ui-icon ui-icon-play" tabindex="1" title="play" style="display: block;">play</a></li>
-							<li class="jp-pause ui-state-default ui-corner-all" style="display: none;"><a href="javascript:;" class="jp-pause ui-icon ui-icon-pause" tabindex="1" title="pause" style="display: none;">pause</a></li>
-							<li class="jp-repeat ui-state-default ui-corner-all"><a href="javascript:;" class="jp-repeat ui-icon ui-icon-refresh" tabindex="1" title="repeat">repeat</a></li>
-							<li class="jp-repeat-off ui-state-default ui-state-active ui-corner-all" style="display: none;"><a href="javascript:;" class="jp-repeat-off ui-icon ui-icon-refresh" tabindex="1" title="repeat off" style="display: none;">repeat off</a></li>
-						</ul>
-						<div class="jp-progress-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 0%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a></div>
-						<div class="jp-clearboth"></div>
+					<div id="jquery_jplayer" class="jp-jplayer"></div>
+					<div id="jp_container">
+						<div class="jp-gui ui-widget ui-widget-content ui-corner-all">
+							<ul>
+								<li style="display:none;" class="jp-play ui-state-default ui-corner-all"><a href="javascript:;" class="jp-play ui-icon ui-icon-play" tabindex="1" title="play"></a></li>
+								<li class="jp-pause ui-state-default ui-corner-all"><a href="javascript:;" class="jp-pause ui-icon ui-icon-pause" tabindex="1" title="pause"></a></li>
+							</ul>
+							<div class="jp-progress-slider ui-slider ui-slider-horizontal ui-widgetui-corner-all" aria-disabled="false"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 0%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a></div>
+							<div class="jp-clearboth"></div>
+						</div>
 					</div>
 				</div>
 			</div>

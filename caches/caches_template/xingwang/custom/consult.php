@@ -1,7 +1,12 @@
 <?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header"); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>xingwang/consult.css" />
 <script language="javascript" type="text/javascript" src="<?php echo JS_PATH;?>jquery.validate.js" charset="UTF-8"></script>
-
+<style type="text/css">
+	.page-panel .send{
+		background:url(<?php echo IMG_PATH;?>xingwang/send.png);
+		background-repeat: no-repeat;
+	}
+</style>
 
 				<div id="pagePanel" class="page-panel">
 					<div class="desc"><?php echo $desc;?></div>
@@ -30,19 +35,19 @@
 							<div class="item">
 								<span name="userConsult" class="user-text consult-time">咨询时段</span>
 								<span class="container">
-									<input class="radio-icon" name="radioConsult" type="radio" name="duration" value="09:00~09:30"> 
+									<input class="radio-icon" type="radio" name="duration" value="09:00~09:30"> 
 									<span class="user-time">09:00~09:30</span>
-									<input class="radio-icon" name="radioConsult" type="radio" name="duration" value="10:30~11:00">
+									<input class="radio-icon" type="radio" name="duration" value="10:30~11:00">
 									<span class="user-time">10:30~11:00</span>
 									</br>
-									<input class="radio-icon" name="radioConsult" type="radio" name="duration" value="09:30~10:00"> 
+									<input class="radio-icon" type="radio" name="duration" value="09:30~10:00"> 
 									<span class="user-time">09:30~10:00</span>
-									<input class="radio-icon" name="radioConsult" type="radio" name="duration" value="11:00~11:30">
+									<input class="radio-icon" type="radio" name="duration" value="11:00~11:30">
 									<span class="user-time">11:00~11:30</span>
 									</br>
-									<input class="radio-icon" name="radioConsult" type="radio" name="duration" value="10:00~10:30"> 
+									<input class="radio-icon" type="radio" name="duration" value="10:00~10:30"> 
 									<span class="user-time">10:00~10:30</span>
-									<input class="radio-icon" name="radioConsult" type="radio">
+									<input class="radio-icon" type="radio" name="duration" value="10:00~10:30">
 									<span class="user-time">11:30~12:00</span>
 								</span>
 							</div>
@@ -64,37 +69,11 @@
                                 <?php echo form::checkcode(); ?>
 							</div>
 							<div class="item send-item">
-								<input class="send" type="submit" value='送出' id="dosubmit" name="dosubmit">
+								<input class="send" type="submit" value='送&nbsp;&nbsp;&nbsp;&nbsp;出' id="dosubmit" name="dosubmit">
 							</div>
 						</form>
 					</div>
 				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script type="text/javascript">
   $(function() {
       formvalidate('#myform', {
