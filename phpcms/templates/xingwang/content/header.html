@@ -6,7 +6,6 @@
 <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
 <meta name="keywords" content="{$SEO['keyword']}">
 <meta name="description" content="{$SEO['description']}">
-<link href="{CSS_PATH}reset.css" rel="stylesheet" type="text/css" />
 
 <link href="{CSS_PATH}xingwang/common.css" rel="stylesheet" type="text/css" />
 <link href="{CSS_PATH}xingwang/header.css" rel="stylesheet" type="text/css" />
@@ -18,6 +17,14 @@
 
 <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
 <script type="text/javascript" src="{JS_PATH}xingwang/common.js"></script>
+<script type="text/javascript" src="{JS_PATH}xingwang/audioPlay.js"></script>
+<script type="text/javascript" src="{JS_PATH}xingwang/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}xingwang/jquery-ui.js"></script>
+
+<script type="text/javascript">
+	var jsPath = "{JS_PATH}xingwang";
+</script>
+
 <style type="text/css">
 	.page-header{
 		background:url({IMG_PATH}xingwang/header.png) center center;
@@ -58,7 +65,7 @@
 					{$key++}
 					{/if}
 					{/loop}				
-				</ul>				
+				</ul>
 			</div>
 		</div>
 		<div id="pageContainer" class="page-container">
