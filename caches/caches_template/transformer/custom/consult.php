@@ -76,16 +76,16 @@
 				</div>
 <script type="text/javascript">
   $(function() {
-      formvalidate('#myform', {
-        'name': {required: true, chinese: true, minlength: 2},
-        'telephone': {required: true, mobile: true},
-        'email':{email: true},
-        'address': {required: true, minlength: 10}
-      }, {
-        'name': {chinese : '请填写正确的姓名', minlength: '请填写正确的姓名'}
-        'address': {required: '请填写您的详细地址'},
-        'content': {required: '请填写加盟留言'}
-      });
+      // formvalidate('#myform', {
+      //   'name': {required: true, chinese: true, minlength: 2},
+      //   'telephone': {required: true, mobile: true},
+      //   'email':{email: true},
+      //   'address': {required: true, minlength: 10}
+      // }, {
+      //   'name': {chinese : '请填写正确的姓名', minlength: '请填写正确的姓名'},
+      //   'address': {required: '请填写您的详细地址'},
+      //   'content': {required: '请填写加盟留言'}
+      // });
   });
 </script>
 <?php include template("content","footer"); ?>
