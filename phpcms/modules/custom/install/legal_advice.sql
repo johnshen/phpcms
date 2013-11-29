@@ -11,3 +11,13 @@ CREATE TABLE `phpcms_legal_advice` (
   `createtime` timestamp default current_timestamp comment '创建时间',
   PRIMARY KEY (`id`)
 ) DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `phpcms_news` (
+  `id` integer unsigned NOT NULL AUTO_INCREMENT,
+  `content` char(50) NOT NULL DEFAULT '' comment '活动标题', 
+  `starttime` date NOT NULL DEFAULT '0000-00-00' comment '起始时间',
+  `endtime` date NOT NULL DEFAULT '0000-00-00' comment '结束时间',
+  `createtime` timestamp default current_timestamp comment '创建时间',
+  PRIMARY KEY (`id`)
+) DEFAULT CHARSET=utf8;

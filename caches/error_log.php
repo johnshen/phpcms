@@ -51,3 +51,4 @@
 <?php exit;?>11-29 03:13:42 | 2 | require_once(CACHE_MODEL_PATHcontent_output.class.php): failed to open stream: No such file or directory | phpcms/modules/custom/consult.php | 34
 <?php exit;?>11-29 12:55:32 | 2 | file_put_contents(/home/shenqiang/data/www/phpcms/index.html): failed to open stream: Permission denied | phpcms/modules/content/classes/html.class.php | 363
 <?php exit;?>11-29 12:55:32 | 2 | chmod(): Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-29 12:57:04 | 2 | chmod(): Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
