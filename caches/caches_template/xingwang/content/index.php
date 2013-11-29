@@ -38,13 +38,24 @@
 		<div class="page-container">
 			<a href="<?php echo $CATEGORYS['2']['url'];?>" class="enter"></a>
 		</div>
+
+                <?php $news = ''; ?>
+                <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"custom\" data=\"op=custom&tag_md5=41a2d1fe129f76d487374b083aebc366&action=lists&limit=10\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$custom_tag = pc_base::load_app_class("custom_tag", "custom");if (method_exists($custom_tag, 'lists')) {$data = $custom_tag->lists(array('limit'=>'20',));}?>
+                <?php $n=1;if(is_array($data)) foreach($data AS $info) { ?>
+                    <?php $news .= $info['content'] . "   "; ?>
+                <?php $n++;}unset($n); ?>
+                <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
+                        
+                <?php if ($news != '') { ?>
 		<div id="pageFooter" class="page-footer">
+
 			<span class="icon"></span>
 			<span class="tip">最新消息:</span>
 			<span id="panel" class="panel">
-				<span id="message" class="message">免費法律諮詢-本所每月二、四、五周周一上午9時到12時.免費法律諮詢.每位諮詢時間原則上以30分鐘為</span>
+				<span id="message" class="message"><?php echo $news; ?></span>
 			</span>	
 		</div>
+                <?php } ?>
 	</div>
 	<script type="text/javascript">
 		$(function(){
@@ -68,7 +79,9 @@
 
 			$panel.width(width);
 
+                        <?php if ($news != '') { ?>
 			messageAnimte();
+                        <?php } ?>
 		})
 	</script>
 </body>
