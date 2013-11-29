@@ -10,18 +10,66 @@
 	
 	<link href="{CSS_PATH}xingwang/common.css" rel="stylesheet" type="text/css" />
 	<link href="{CSS_PATH}xingwang/index.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+	<style type="text/css">
+		.page-header{
+			background: url({IMG_PATH}xingwang/bg.png) center bottom;
+			background-repeat: no-repeat;
+		}
+
+		.page-container .enter{
+			background: url({IMG_PATH}xingwang/logo.png) center top;
+			background-repeat: no-repeat;
+		}
+
+		.page-footer{
+			background:url({IMG_PATH}xingwang/border_icon.png);
+		}
+
+		.page-footer .icon{
+			background:url({IMG_PATH}xingwang/message_icon.png);
+			background-repeat: no-repeat;
+		}
+	</style>
 </head>
 <body>
 	<div id="pageIndex" class="page-index">
-		<div class="page-header" style="background: url({IMG_PATH}xingwang/bg.png) center bottom;background-repeat: no-repeat;"></div>
+		<div class="page-header"></div>
 		<div class="page-container">
-			<a href="{$CATEGORYS[2]['url']}" class="enter" style="background: url({IMG_PATH}xingwang/logo.png) center top;background-repeat: no-repeat;"></a>
+			<a href="{$CATEGORYS[2]['url']}" class="enter"></a>
 		</div>
-		<div id="pageFooter" class="page-footer" style="background:url({IMG_PATH}xingwang/border_icon.png);">
-			<span class="icon" style="background:url({IMG_PATH}xingwang/message_icon.png);"></span>			
-			<span class="tip">最新消息:</span>			
-			<span class="message">免費法律諮詢-本所每月二、四、五周周一上午9時到12時.免費法律諮詢.每位諮詢時間原則上以30分鐘為</span>
+		<div id="pageFooter" class="page-footer">
+			<span class="icon"></span>
+			<span class="tip">最新消息:</span>
+			<span id="panel" class="panel">
+				<span id="message" class="message">免費法律諮詢-本所每月二、四、五周周一上午9時到12時.免費法律諮詢.每位諮詢時間原則上以30分鐘為</span>
+			</span>	
 		</div>
 	</div>
+	<script type="text/javascript">
+		$(function(){
+			var width = $(window).width() - 134,
+
+				timer = 30000,
+
+				$message = $('#message'),
+
+				$panel = $('#panel'),
+
+				messageWidth = $message.width(),
+
+				messageAnimte = function(){
+					$message.stop().css('left',width).animate({
+						left:-messageWidth
+					},timer,function(){
+						messageAnimte();
+					});
+				};
+
+			$panel.width(width);
+
+			messageAnimte();
+		})
+	</script>
 </body>
 </html>
