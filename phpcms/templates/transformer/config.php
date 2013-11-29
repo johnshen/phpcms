@@ -1,8 +1,8 @@
 <?php return array (
-  'name' => '默认模板',
-  'author' => 'PHPCMS TEAM',
-  'dirname' => 'default',
-  'homepage' => 'http://www.phpcms.cn/',
+  'name' => 'transformer',
+  'author' => '变形金刚',
+  'dirname' => 'transformer',
+  'homepage' => '',
   'version' => '1.0',
   'disable' => 0,
   'file_explan' => 
