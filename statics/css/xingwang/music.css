@@ -92,7 +92,7 @@
 }
 
 .ui-widget-content {
-	height: 22px;
+	height: 23px;
 }
 
 .jp-gui ul li {
@@ -118,7 +118,7 @@
 	position: absolute;
 	z-index: 2;
 	width: 12px;
-	height: 22px;
+	height: 23px;
 	cursor: default;
 }
 
@@ -132,7 +132,7 @@
 }
 
 .jp-progress-slider {
-	height: 22px;
+	height: 23px;
 	position: absolute;
 	top: 0px;
 	left: 38px;
