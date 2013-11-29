@@ -3,7 +3,7 @@
 	color: #121718;
 	display: block;
 	line-height: 30px;
-	margin:0px 60px 30px 60px;
+	margin:0px 60px 0px 60px;
 }
 
 .page-panel .title{
@@ -12,7 +12,14 @@
 	line-height: 54px;
 	cursor: pointer;
 	display: inline-block;
+	margin-top: 7px;
 	text-align: left;
+	font-size: 0px;
+}
+
+.page-panel .name{
+	margin-left: 6px;
+	font-size: 16px;
 }
 
 .page-panel .table{
@@ -41,6 +48,7 @@
 	margin-left: 35px;
 	position: relative;
 	top: -2px;
+	*top:-4px;
 	display: inline-block;
 }
 
@@ -86,6 +94,7 @@
 
 .page-panel .header .middle{
 	width: 418px;
+	*width: 416px;
 	display: inline-block;
 	text-align: center;
 	font-size: 16px;

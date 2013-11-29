@@ -1,4 +1,5 @@
 .page-mask{
+	display: none;
 	position: fixed;
 	z-index:1;
 	top: 0px;
@@ -11,6 +12,7 @@
 }
 
 .page-music{
+	display: none;
 	width: 620px;
 	height: 500px;
 	position: fixed;
@@ -27,8 +29,6 @@
 	width: 100%;
 	display: inline-block;
 	height:33px;
-	background: url(../../images/music/music.png) center top;
-	background-repeat: no-repeat;
 }
 
 .page-music .title{
@@ -36,8 +36,6 @@
 	width: 100%;
 	display: inline-block;
 	height:19px;
-	background: url(../../images/music/title.png) center top;
-	background-repeat: no-repeat;
 }
 
 .page-music .panel{
@@ -59,8 +57,6 @@
 }
 
 .page-music .pic{
-	background: url(../../images/music/pic.png);
-	background-repeat: no-repeat;
 	width: 269px;
 	height:265px;
 	display: inline-block;
@@ -88,4 +84,67 @@
 
 .page-music .desc a{
 	color: #737373;
+}
+
+.jp-gui {
+	position: relative;
+	width: 100%;
+}
+
+.ui-widget-content {
+	background:url(../images/music_bg.png) 50% 50% repeat-x;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	border: 1px solid #d3d3d3;
+	background: #e6e6e6;
+}
+
+.jp-gui ul li {
+	position: relative;
+	float: left;
+	list-style: none;
+	margin: 2px;
+	padding: 4px 0;
+	cursor: pointer;
+}
+
+.jp-gui li.jp-repeat, .jp-gui li.jp-repeat-off {
+	margin-left: 344px;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: default;
+}
+
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+.jp-progress-slider {
+	position: absolute;
+	top: 28px;
+	left: 100px;
+	width: 300px;
+}
+
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
 }

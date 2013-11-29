@@ -10,16 +10,19 @@
 	margin-top:12px;
 }
 
-.page-footer span{
+.page-footer span,
+.page-footer .icon{
 	display: inline-block;
 	margin-left: 11px;
 }
 
 .page-footer .first{
+	font-size: 12px;
 	margin-left: 0px;
 }
 
 .page-footer .address a{
+	font-size: 12px;
 	color: #7379BE;
 	border-bottom:1px solid #7379BE;
 	padding-bottom:1px;
@@ -27,12 +30,16 @@
 }
 
 .page-footer .wrap{
+	font-size: 0px;
 	width: 858px;
 	height: 105px;
 	display: block;
 	margin: auto;
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 15px;
+	*padding-top: 15px;
+	line-height: 10px;
+	*line-height: 15px;
 }
 
 .page-footer .location{
@@ -51,6 +58,10 @@
 	top: 8px;
 	height: 27px;
 	cursor: pointer;
+}
+
+.page-footer p.panel{
+	font-size: 12px;
 }
 
 .page-footer p a{

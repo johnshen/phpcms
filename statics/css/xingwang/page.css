@@ -7,17 +7,17 @@
 
 .page-container{
 	width: 100%;
-	min-height: 538px;
 	position: relative;
 	padding-bottom: 85px;
 }
 
 .page-container .wrap{
-	width: 858px;
+	width: 884px;
 	min-height: 560px;
 	display: block;
 	margin: auto;
 	position: relative;
+	padding-bottom: 30px;
 }
 
 .page-container .wrap-left{
