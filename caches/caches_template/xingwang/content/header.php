@@ -6,7 +6,6 @@
 <title><?php if(isset($SEO['title']) && !empty($SEO['title'])) { ?><?php echo $SEO['title'];?><?php } ?><?php echo $SEO['site_title'];?></title>
 <meta name="keywords" content="<?php echo $SEO['keyword'];?>">
 <meta name="description" content="<?php echo $SEO['description'];?>">
-<link href="<?php echo CSS_PATH;?>reset.css" rel="stylesheet" type="text/css" />
 
 <link href="<?php echo CSS_PATH;?>xingwang/common.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo CSS_PATH;?>xingwang/header.css" rel="stylesheet" type="text/css" />
@@ -18,6 +17,14 @@
 
 <script type="text/javascript" src="<?php echo JS_PATH;?>jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>xingwang/common.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH;?>xingwang/audioPlay.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH;?>xingwang/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH;?>xingwang/jquery-ui.js"></script>
+
+<script type="text/javascript">
+	var jsPath = "<?php echo JS_PATH;?>xingwang";
+</script>
+
 <style type="text/css">
 	.page-header{
 		background:url(<?php echo IMG_PATH;?>xingwang/header.png) center center;
@@ -58,7 +65,7 @@
 					<?php $key++; ?>
 					<?php } ?>
 					<?php $n++;}unset($n); ?>				
-				</ul>				
+				</ul>
 			</div>
 		</div>
 		<div id="pageContainer" class="page-container">

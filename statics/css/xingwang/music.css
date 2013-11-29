@@ -92,20 +92,13 @@
 }
 
 .ui-widget-content {
-	background:url(../images/music_bg.png) 50% 50% repeat-x;
-}
-
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-	border: 1px solid #d3d3d3;
-	background: #e6e6e6;
+	height: 22px;
 }
 
 .jp-gui ul li {
 	position: relative;
 	float: left;
 	list-style: none;
-	margin: 2px;
-	padding: 4px 0;
 	cursor: pointer;
 }
 
@@ -113,15 +106,19 @@
 	margin-left: 344px;
 }
 
-.ui-slider-horizontal .ui-slider-handle {
-	top: -.3em;
-	margin-left: -.6em;
+.jp-play,
+.jp-pause{
+	width: 30px;
+	height: 22px;
+	display: inline-block;
+	border-right: #151515 solid 1px;
 }
+
 .ui-slider .ui-slider-handle {
 	position: absolute;
 	z-index: 2;
-	width: 1.2em;
-	height: 1.2em;
+	width: 12px;
+	height: 22px;
 	cursor: default;
 }
 
@@ -135,10 +132,12 @@
 }
 
 .jp-progress-slider {
+	height: 22px;
 	position: absolute;
-	top: 28px;
-	left: 100px;
-	width: 300px;
+	top: 0px;
+	left: 38px;
+	width: 210px;
+	cursor: pointer;
 }
 
 .ui-slider-horizontal .ui-slider-range-min {
@@ -147,4 +146,8 @@
 .ui-slider-horizontal .ui-slider-range {
 	top: 0;
 	height: 100%;
+}
+
+.jp-clearboth{
+	clear:both;
 }
