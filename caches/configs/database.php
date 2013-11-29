@@ -2,7 +2,7 @@
 
 return array (
 	'default' => array (
-		'hostname' => '127.0.0.1',
+		'hostname' => 'localhost',
 		'database' => 'phpcms',
 		'username' => 'root',
 		//'password' => 'AyXwZhBf0nGlKxJf',
