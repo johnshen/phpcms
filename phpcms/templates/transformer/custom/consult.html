@@ -22,20 +22,20 @@
                                                                 <span class="user-sex">小&nbsp;&nbsp;姐</span>
                                                         </div>
                                                         <div class="item">
-                                                                <span class="user-text">联络电话</span>
+                                                                <span class="user-text">聯絡電話</span>
                                                                 <input class="user-input" type="text" name="phone" id="phone"/>
                                                         </div>
                                                         <div class="item">
-                                                                <span class="user-text">电子信箱</span>
+                                                                <span class="user-text">電子信箱</span>
                                                                 <input class="user-input" type="text" name="email" id="email"/>
                                                         </div>
                                                         <div class="item">
-                                                                <span class="user-text">预约时间</span>
+                                                                <span class="user-text">預約時間</span>
                                                                 <!-- input id="userTime" class="user-input" type="text" name="appointment"/-->
                                 <?php echo form::date('appointment-day'); ?>
                                                         </div>
                                                         <div class="item">
-                                                                <span class="user-text consult-time">咨询时段</span>
+                                                                <span class="user-text consult-time">咨詢時段</span>
                                                                 <span class="container">
                                                                         <input class="radio-icon" type="radio" name="duration" value="09:00~09:30" checked="checked"> 
                                                                         <span class="user-time">09:00~09:30</span>
@@ -58,14 +58,14 @@
                                                                 <input id="topic" class="user-input" type="text" name="topic" />
                                                         </div>
                                                         <div class="item">
-                                                                <span class="user-text consult-content">咨询内容</span>
+                                                                <span class="user-text consult-content">咨詢內容</span>
                                                                 <textarea id="content" class="user-textarea" name="content"></textarea>
                                                         </div>
                                                         <div class="item">
                                                                 <span class="code-panel">
-                                                                        <span class="user-text">验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
+                                                                        <span class="user-text">驗&nbsp;&nbsp;證&nbsp;&nbsp;碼</span>
                                                                         <input id="vcode" class="user-input-code" type="text" name="vcode"/>
-                                                                        <span class="warn">*请输入右方图片所显示的文字</span>
+                                                                        <span class="warn">*請輸入右方圖片所顯示的文字</span>
                                                                 </span>
                                                                 <!-- image class="code-image" src="images/code.png"></image-->
                                 <?php echo form::checkcode('checkcode', 5, 20, 130, 50, '', '', '', 'code-image'); ?>
@@ -96,22 +96,22 @@
 
                         if($.trim($username.val()) == ''){
                                 $username.focus();
-                                notification.tipIn($username,'姓名不能为空!');
+                                notification.tipIn($username,'姓名不能為空!');
                         }else if($.trim($phone.val()) == ''){
                                 $phone.focus();
-                                notification.tipIn($phone,'电话号码不能为空!');
+                                notification.tipIn($phone,'電話號碼不能為空!');
                         }else if(!utils.checkEmail($.trim($email.val()))){
                                 $email.focus();
-                                notification.tipIn($email,'电子信箱格式错误!');
+                                notification.tipIn($email,'電子信箱格式錯誤!');
                         }else if(!$.validator.methods['isDate']($userTime.val())){
                                 $userTime.focus();
-                                notification.tipIn($userTime,'请输入正确的日期!');
+                                notification.tipIn($userTime,'請輸入正確的日期!');
                         }else if($.trim($topic.val()) == ''){
                                 $topic.focus();
-                                notification.tipIn($topic,'主旨不能为空!');
+                                notification.tipIn($topic,'主旨不能為空!');
                         }else if($.trim($vcode.val()) == ''){
                                 $vcode.focus();
-                                notification.tipIn($vcode,'验证码不能为空!');
+                                notification.tipIn($vcode,'驗證碼不能為空!');
                         }else{
                                 $myform[0].submit();
                         }
@@ -126,13 +126,13 @@
                         return true;
                 });
 
-                $userTime.watermark('请输入正确的时间格式:YYYY-MM-DD');
-                $vcode.watermark('请输入验证码');
-                $topic.watermark('请输入主旨');
-                $content.watermark('请输入咨询内容');
-                $username.watermark('请填写正确的姓名');
-                $phone.watermark('请填写正确的电话号码');
-                $email.watermark('请填写正确的电子信箱');
+                $userTime.watermark('請輸入正確的時間格式:YYYY-MM-DD');
+                $vcode.watermark('請輸入驗證碼');
+                $topic.watermark('請輸入主旨');
+                $content.watermark('請輸入咨詢內容');
+                $username.watermark('請填寫正確的姓名');
+                $phone.watermark('請填寫正確的電話號碼');
+                $email.watermark('請填寫正確的電子信箱');
         });
 </script>
 {template "content","footer"}
