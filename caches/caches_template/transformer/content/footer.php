@@ -1,77 +1,77 @@
-<style type="text/css">
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><style type="text/css">
 	.page-container .wrap-bottom{
-		background: url({IMG_PATH}xingwang/bottom.png)center center;
+		background: url(<?php echo IMG_PATH;?>xingwang/bottom.png)center center;
 		background-repeat:no-repeat;
 	}
 
 	.page-tip .music-about{
-		background:url({IMG_PATH}xingwang/music_about.png);
+		background:url(<?php echo IMG_PATH;?>xingwang/music_about.png);
 		background-repeat: no-repeat;
 	}
 
 	.page-tip .music-off{
-		background:url({IMG_PATH}xingwang/music_off.png);
+		background:url(<?php echo IMG_PATH;?>xingwang/music_off.png);
 		background-repeat: no-repeat;
 	}
 
 	.page-music .logo{
-		background: url({IMG_PATH}xingwang/music.png) center top;
+		background: url(<?php echo IMG_PATH;?>xingwang/music.png) center top;
 		background-repeat: no-repeat;
 	}
 
 	.page-music .title{
-		background: url({IMG_PATH}xingwang/title.png) center top;
+		background: url(<?php echo IMG_PATH;?>xingwang/title.png) center top;
 		background-repeat: no-repeat;
 	}
 
 	.page-music .pic{
-		background: url({IMG_PATH}xingwang/pic.png);
+		background: url(<?php echo IMG_PATH;?>xingwang/pic.png);
 		background-repeat: no-repeat;
 	}
 
 	.page-footer{
-		background:url({IMG_PATH}xingwang/footer.png) center center;
+		background:url(<?php echo IMG_PATH;?>xingwang/footer.png) center center;
 		background-repeat:no-repeat;
 	}
 
 	.page-footer .location{
-		background:url({IMG_PATH}xingwang/location.png);
+		background:url(<?php echo IMG_PATH;?>xingwang/location.png);
 		background-repeat: no-repeat;
 	}
 
 	.page-footer .facebook{
-		background:url({IMG_PATH}xingwang/facebook.png);
+		background:url(<?php echo IMG_PATH;?>xingwang/facebook.png);
 		background-repeat: no-repeat;
 	}
 
 	.page-footer .google{
-		background:url({IMG_PATH}xingwang/google.png);
+		background:url(<?php echo IMG_PATH;?>xingwang/google.png);
 		background-repeat: no-repeat;
 	}
 
 	.page-footer .ping{
-		background:url({IMG_PATH}xingwang/ping.png);
+		background:url(<?php echo IMG_PATH;?>xingwang/ping.png);
 		background-repeat: no-repeat;
 	}
 
 	.ui-widget-content {
-		background:url({IMG_PATH}xingwang/music_bg.png) center center repeat-x;
+		background:url(<?php echo IMG_PATH;?>xingwang/music_bg.png) center center repeat-x;
 	}
 
 	.ui-slider-horizontal{
-		background:url({IMG_PATH}xingwang/music_line.png) center center repeat-x;
+		background:url(<?php echo IMG_PATH;?>xingwang/music_line.png) center center repeat-x;
 	}
 
 	.ui-icon-play{
-		background:url({IMG_PATH}xingwang/play.png) center center no-repeat;
+		background:url(<?php echo IMG_PATH;?>xingwang/play.png) center center no-repeat;
 	}
 
 	.ui-icon-pause{
-		background:url({IMG_PATH}xingwang/pause.png) center center no-repeat;
+		background:url(<?php echo IMG_PATH;?>xingwang/pause.png) center center no-repeat;
 	}
 
 	.ui-slider .ui-slider-handle{
-		background:url({IMG_PATH}xingwang/music_buttom.png) center center repeat-x;
+		background:url(<?php echo IMG_PATH;?>xingwang/music_buttom.png) center center repeat-x;
 	}
 </style>
 

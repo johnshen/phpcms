@@ -1,16 +1,16 @@
-{template "content","header"}
-<link rel="stylesheet" type="text/css" href="{CSS_PATH}xingwang/consult.css" />
-<script language="javascript" type="text/javascript" src="{JS_PATH}xingwang/watermark.js" charset="UTF-8"></script>
-<script language="javascript" type="text/javascript" src="{JS_PATH}jquery.validate.js" charset="UTF-8"></script>
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header"); ?>
+<link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>xingwang/consult.css" />
+<script language="javascript" type="text/javascript" src="<?php echo JS_PATH;?>xingwang/watermark.js" charset="UTF-8"></script>
+<script language="javascript" type="text/javascript" src="<?php echo JS_PATH;?>jquery.validate.js" charset="UTF-8"></script>
 <style type="text/css">
 	.page-panel .send{
-		background:url({IMG_PATH}xingwang/send.png);
+		background:url(<?php echo IMG_PATH;?>xingwang/send.png);
 		background-repeat: no-repeat;
 	}
 </style>
 
 				<div id="pagePanel" class="page-panel">
-					<div class="desc">{$desc}</div>
+					<div class="desc"><?php echo $desc;?></div>
 					<div class="content">
                         <form id="myform" method="post" action="?m=custom&c=consult&a=send">
 							<div class="item">
@@ -124,4 +124,4 @@
 		$email.watermark('请填写正确的电子信箱');
 	});
 </script>
-{template "content","footer"}
+<?php include template("content","footer"); ?>

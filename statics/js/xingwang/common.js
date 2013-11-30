@@ -1,4 +1,36 @@
 $(function(){
+
+	window.utils = {
+		checkEmail : function(value){
+			var flag = false;
+			if(!value) return false;
+			if(typeof value == "string")
+			{
+				value = value.replace(/(^\s*)|(\s*$)/g,"").split(";");
+			}
+			if(value[value.length-1] == "")
+			{
+				value.pop();
+			}
+			var regularExpression = /^[0-9a-z_-][_.0-9a-z-]{0,31}@([0-9a-z][0-9a-z-]{0,30}\.){1,4}[a-z]{2,4}$/i;
+			for(var i = 0, len = value.length; i < len; i++) {
+				if(regularExpression.test(value[i])) {
+					flag = true;
+				} else
+					flag = false;
+			}
+			return flag;
+		},
+		checkPhone:function(value){
+			var pattern=/(^[0-9]{3,4}\-[0-9]{3,8}$)|(^[0-9]{3,8}$)|(^\([0-9]{3,4}\)[0-9]{3,8}$)|(^0{0,1}13[0-9]{9}$)/; 
+			if(pattern.test(value)) { 
+				return true;
+			} else {
+				return false; 
+			} 
+		}
+	};
+
 	var hideMusic = function(){
 			$('#pageMusic').hide();
 			$('#pageMask').hide();
