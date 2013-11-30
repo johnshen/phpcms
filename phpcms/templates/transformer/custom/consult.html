@@ -32,7 +32,7 @@
 							<div class="item">
 								<span class="user-text">预约时间</span>
 								<!-- input id="userTime" class="user-input" type="text" name="appointment"/-->
-                                <span class="user-input"><?php echo form::date('appointment-day'); ?></span>
+                                <?php echo form::date('appointment-day'); ?>
 							</div>
 							<div class="item">
 								<span class="user-text consult-time">咨询时段</span>
@@ -78,7 +78,7 @@
 				</div>
 <script type="text/javascript">
 	$(function() {
-		var $userTime = $('#userTime'),
+		var $userTime = $('#appointment-day'),
 			$username = $('#username'),
 			$phone = $('#phone'),
 			$vcode = $('#vcode'),
