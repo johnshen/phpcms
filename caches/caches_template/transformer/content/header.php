@@ -20,6 +20,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH;?>xingwang/audioPlay.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>xingwang/jquery.jplayer.min.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>xingwang/jquery-ui.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH;?>xingwang/tip.js"></script>
 
 <script type="text/javascript">
 	var jsPath = "<?php echo JS_PATH;?>xingwang";
@@ -48,6 +49,39 @@
 
 	.page-container .wrap{
 		background: url(<?php echo IMG_PATH;?>xingwang/content_bg.png);
+	}
+
+	#tip_holder {
+	    background-image:url(<?php echo IMG_PATH;?>xingwang/tip.png);
+	    background-repeat:no-repeat;
+	}
+
+	#tip_holder.tip_top #tip_arrow {
+	    background:url(<?php echo IMG_PATH;?>xingwang/tip.png) -13px -152px no-repeat;
+	}
+
+	#tip_holder.tip_bottom #tip_arrow {
+	    background:url(<?php echo IMG_PATH;?>xingwang/tip.png) 0 -152px no-repeat;
+	}
+
+	#tip_holder.tip_top #tip_content ,
+	#tip_holder.tip_bottom #tip_content {
+	    background:url(<?php echo IMG_PATH;?>xingwang/tip.png) right 0 no-repeat;
+	}
+
+	#tip_holder.tip_right #tip_content {
+	    background:url(<?php echo IMG_PATH;?>xingwang/tip.png) 0px -38px repeat-x;
+	}
+
+	#tip_holder.tip_right #tip_border {
+	    background:url(<?php echo IMG_PATH;?>xingwang/tip.png) right 0 no-repeat;
+	}
+
+	#tip_holder.tip_left #tip_content {
+	    background:url(<?php echo IMG_PATH;?>xingwang/tip.png) left -38px repeat-x;
+	}
+	#tip_holder.tip_left #tip_border {
+	    background:url(<?php echo IMG_PATH;?>xingwang/tip.png) left bottom no-repeat;
 	}
 </style>
 </head>

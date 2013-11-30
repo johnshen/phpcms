@@ -31,6 +31,26 @@ $(function(){
 		}
 	};
 
+	window.notification = {
+		tipIn : function(dom,txt,time,options) {
+	        dom = this.lastTip = $(dom).tip($.extend({
+	            defaultPosition:"right",
+	            maxWidth:"auto"
+	        },options)).trigger("showTip",txt);
+	       	if(this.tipTimer) clearTimeout(this.tipTimer)
+	        this.tipTimer=setTimeout($.proxy(this.tipOut,dom),parseInt(time || 5000,10));
+	    },
+	    tipOut : function(dom) {
+	        var elem = dom && ($.type(dom) != "number")?dom:this;
+	        $(elem).trigger("hideTip"); 
+	    },
+	    tipClear:function(){
+	        if(this.lastTip) {
+	            this.lastTip.trigger("hideTip");
+	        }
+	    }
+	};
+
 	var hideMusic = function(){
 			$('#pageMusic').hide();
 			$('#pageMask').hide();
