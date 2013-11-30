@@ -211,7 +211,7 @@ return array (
     'parentdir' => 'LawOfFamily/',
     'catdir' => 'LawOfMarriage',
     'url' => 'http://local.phpcms.com/index.php?m=content&c=index&a=lists&catid=8',
-    'items' => '0',
+    'items' => '17',
     'hits' => '0',
     'setting' => 'array (
   \'workflowid\' => \'\',
@@ -221,7 +221,7 @@ return array (
   \'template_list\' => \'transformer\',
   \'category_template\' => \'category\',
   \'list_template\' => \'list_law\',
-  \'show_template\' => \'show\',
+  \'show_template\' => \'show_law\',
   \'meta_title\' => \'\',
   \'meta_keywords\' => \'\',
   \'meta_description\' => \'\',

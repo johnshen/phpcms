@@ -72,13 +72,15 @@
 				<span class="middle">標題</span>
 				<span class="right">日期</span>
 			</div>
-			{pc:content action="lists" catid="$catid" num="10" order="id DESC" page="$page"}
+            <?php $counter = 0; ?>
+			{pc:content action="lists" catid="$catid" num="1" order="id DESC" page="$page"}
         	<ul class="list lh24 f14">
 			{loop $data $r}
-				<div class="item">
-					<span class="left">{$r['id']}</span>
+                <?php $counter++; ?>
+				<div class="item <?php if ($counter%$pagesize == 0) {?> last<?php } ?>">
+					<span class="left">{str_pad($r['id'], 3, '0', STR_PAD_LEFT)}</span>
 					<span class="middle"><a href="{$r[url]}">{$r[title]}</a></span>
-					<span class="right">{date('Y-m-d H:i:s',$r[inputtime])}</span>
+					<span class="right">{date('Y/m/d',$r[inputtime])}</span>
 				</div>
 			{/loop}
         	</ul>
