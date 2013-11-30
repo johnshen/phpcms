@@ -1,6 +1,7 @@
 <?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header"); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>xingwang/consult.css" />
 <script language="javascript" type="text/javascript" src="<?php echo JS_PATH;?>jquery.validate.js" charset="UTF-8"></script>
+<script language="javascript" type="text/javascript" src="<?php echo JS_PATH;?>xingwang/watermark.js" charset="UTF-8"></script>
 <style type="text/css">
 	.page-panel .send{
 		background:url(<?php echo IMG_PATH;?>xingwang/send.png);
@@ -29,7 +30,7 @@
 								<input class="user-input" type="text" name="email"/>
 							</div>
 							<div class="item">
-								<span name="userTime" class="user-text">预约时间</span>
+								<span id="userTime" name="userTime" class="user-text">预约时间</span>
 								<input class="user-input" type="text" name="appointment"/>
 							</div>
 							<div class="item">
@@ -75,17 +76,19 @@
 					</div>
 				</div>
 <script type="text/javascript">
-  $(function() {
-      // formvalidate('#myform', {
-      //   'name': {required: true, chinese: true, minlength: 2},
-      //   'telephone': {required: true, mobile: true},
-      //   'email':{email: true},
-      //   'address': {required: true, minlength: 10}
-      // }, {
-      //   'name': {chinese : '请填写正确的姓名', minlength: '请填写正确的姓名'},
-      //   'address': {required: '请填写您的详细地址'},
-      //   'content': {required: '请填写加盟留言'}
-      // });
-  });
+	$(function() {
+		$('#userTime').watermark('请先来电:02-225554125dasdsad 撒大声地');
+		formvalidate('#myform', {
+				'name': {required: true, chinese: true, minlength: 2},
+				'telephone': {required: true, mobile: true},
+				'email':{email: true},
+				'address': {required: true, minlength: 10}
+			}, {
+				'name': {chinese : '请填写正确的姓名', minlength: '请填写正确的姓名'},
+				'address': {required: '请填写您的详细地址'},
+				'content': {required: '请填写加盟留言'
+			}
+		});
+	});
 </script>
 <?php include template("content","footer"); ?>

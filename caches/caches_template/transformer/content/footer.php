@@ -90,9 +90,9 @@
 					<span class="address">
 						<a target="_blank" href="https://ditu.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8C%97%E8%B7%AF%E4%B8%80%E6%AE%B52%E8%99%9F6%E6%A8%93%E4%B9%8B3&hl=zh-CN&ie=UTF8&sll=30.572269,104.066541&sspn=1.067685,2.113495&brcurrent=3,0x31508e64e5c642c1:0x951daa7c349f366f,0%3B5,0,0&hnear=100%E5%8F%B0%E6%B9%BE%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E4%B8%AD%E5%B1%B1%E5%8C%97%E8%B7%AF%E4%B8%80%E6%AE%B52%E8%99%9F&t=m&z=17&iwloc=A">公司位置</a>
 					</span>					
-					<a class="facebook icon"></a>
-					<a class="google icon"></a>
-					<a class="ping icon"></a>		
+					<a class="facebook icon" href="javascript:window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(document.location.href)+'&amp;t='+encodeURIComponent(document.title));void(0)"></a>
+					<a class="google icon" href="javascript:window.open('http://www.google.com/bookmarks/mark?op=add&amp;bkmk='+encodeURIComponent(document.location.href)+'&amp;title='+encodeURIComponent(document.title));void(0)"></a>
+					<a target="_blank" class="ping icon"></a>		
 				</p>
 				<p class="panel">					
 					<a target="_blank" rel="nofollow" href="#">公司地址/壹北市中正品中山北路一段2號6樓之3</a>
