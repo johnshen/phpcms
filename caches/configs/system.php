@@ -3,7 +3,7 @@ return array(
 //网站路径
 'web_path' => '/',
 //Session配置
-'session_storage' => 'mysql',
+'session_storage' => 'files',
 'session_ttl' => 1800,
 'session_savepath' => CACHE_PATH.'sessions/',
 'session_n' => 0,

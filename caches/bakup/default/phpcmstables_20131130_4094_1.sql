@@ -1,6 +1,6 @@
 # phpcms bakfile
 # version:PHPCMS V9
-# time:2013-11-30 22:07:36
+# time:2013-11-30 23:48:23
 # type:phpcms
 # phpcms:http://www.phpcms.cn
 # --------------------------------------------------------
@@ -23,7 +23,7 @@ CREATE TABLE `v9_admin` (
   KEY `username` (`username`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
-INSERT INTO `v9_admin` VALUES('1','phpcms','ba0d185d0b70ccc92d2f06812b63a023','1','lUK7qi','192.168.2.102','1385816140','john.shen.home@gmail.com','test','','');
+INSERT INTO `v9_admin` VALUES('1','phpcms','ba0d185d0b70ccc92d2f06812b63a023','1','lUK7qi','192.168.2.102','1385826450','john.shen.home@gmail.com','test','','');
 INSERT INTO `v9_admin` VALUES('2','admin','09fe6a1ff5ea1822170299b6a39473c6','2','AaMVaI','192.168.1.31','1385650729','admin@gmail.com','test','','zhtw');
 
 DROP TABLE IF EXISTS `v9_admin_panel`;
@@ -5024,8 +5024,8 @@ CREATE TABLE `v9_session` (
   KEY `lastvisit` (`lastvisit`)
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8;
 
-INSERT INTO `v9_session` VALUES('drf7ok1hh7q8vlroshfd0l2vl1','1','127.0.0.1','1385820429','1','0','admin','index','public_session_life','code|s:5:\"seb7s\";userid|s:1:\"1\";roleid|s:1:\"1\";pc_hash|s:6:\"Qvh4Dn\";lock_screen|i:0;');
-INSERT INTO `v9_session` VALUES('14kd14pqer011kka5sa0r3imk5','1','192.168.2.102','1385820451','1','0','admin','index','public_session_life','code|s:5:\"dlpfu\";userid|s:1:\"1\";roleid|s:1:\"1\";pc_hash|s:6:\"cd2rQ5\";lock_screen|i:0;');
+INSERT INTO `v9_session` VALUES('drf7ok1hh7q8vlroshfd0l2vl1','1','127.0.0.1','1385826349','1','0','admin','index','public_session_life','code|s:5:\"seb7s\";userid|s:1:\"1\";roleid|s:1:\"1\";pc_hash|s:6:\"Qvh4Dn\";lock_screen|i:0;');
+INSERT INTO `v9_session` VALUES('14kd14pqer011kka5sa0r3imk5','1','192.168.2.102','1385826494','1','0','admin','database','export','code|s:4:\"up9p\";userid|s:1:\"1\";roleid|s:1:\"1\";pc_hash|s:6:\"4leoTI\";lock_screen|i:0;');
 
 DROP TABLE IF EXISTS `v9_site`;
 CREATE TABLE `v9_site` (

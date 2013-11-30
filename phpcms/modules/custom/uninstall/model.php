@@ -1,2 +1,2 @@
 <?php  
-return array('legal_advice', 'custom_news');
+return array('consult', 'custom_news');

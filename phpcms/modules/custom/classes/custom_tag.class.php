@@ -15,7 +15,7 @@ class custom_tag {
 	 */
 	public function lists($data) {
 		$where = '1';
-		$siteid = $data['siteid'] ? intval($data['siteid']) : get_siteid();
+		$siteid = isset($data['siteid']) ? intval($data['siteid']) : get_siteid();
 		if ($siteid) $where .= " AND `siteid`='".$siteid."'";
 		$where .= ' AND (`endtime` >= \''.date('Y-m-d').'\' or `endtime`=\'0000-00-00\') AND (`starttime` <= \'' . date('Y-m-d') . '\')';
 		return $this->db->select($where, '*', $data['limit'], 'id DESC');

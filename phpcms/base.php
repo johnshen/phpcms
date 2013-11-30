@@ -30,7 +30,7 @@ pc_base::load_sys_func('global');
 pc_base::load_sys_func('extention');
 pc_base::auto_load_func();
 
-pc_base::load_config('system','errorlog') ? set_error_handler('my_error_handler') : error_reporting(E_ERROR | E_WARNING | E_PARSE);
+//pc_base::load_config('system','errorlog') ? set_error_handler('my_error_handler') : error_reporting(E_ERROR | E_WARNING | E_PARSE);
 //设置本地时差
 function_exists('date_default_timezone_set') && date_default_timezone_set(pc_base::load_config('system','timezone'));
 
