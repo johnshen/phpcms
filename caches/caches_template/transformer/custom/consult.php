@@ -97,7 +97,7 @@
 				alert('电话号码格式错误!');
 			}else if(!utils.checkEmail($.trim($email.val()))){
 				alert('电子信箱格式错误!');
-			}else if(!$.validator.methods['isDate']($userTime.val(),$userTime)){
+			}else if(!$.validator.methods['isDate']($userTime.val())){
 				alert('请输入正确的日期!');
 			}else if($.trim($topic.val()) == ''){
 				alert('主旨不能为空!');
@@ -106,7 +106,7 @@
 			}
 		}
 
-		$.validator.addMethod("isDate", function(value, element){
+		$.validator.addMethod("isDate", function(value){
 			var ereg = /^(\d{1,4})(-|\/)(\d{1,2})(-|\/)(\d{1,2})$/,
 				r = value.match(ereg);
 			if (r == null) {
