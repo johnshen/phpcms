@@ -1,7 +1,7 @@
 <?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header"); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>xingwang/consult.css" />
-<script language="javascript" type="text/javascript" src="<?php echo JS_PATH;?>jquery.validate.js" charset="UTF-8"></script>
 <script language="javascript" type="text/javascript" src="<?php echo JS_PATH;?>xingwang/watermark.js" charset="UTF-8"></script>
+<script language="javascript" type="text/javascript" src="<?php echo JS_PATH;?>jquery.validate.js" charset="UTF-8"></script>
 <style type="text/css">
 	.page-panel .send{
 		background:url(<?php echo IMG_PATH;?>xingwang/send.png);
@@ -14,29 +14,29 @@
 					<div class="content">
                         <form id="myform" method="post" action="?m=custom&c=consult&a=send">
 							<div class="item">
-								<span name="userName" class="user-text">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
-								<input class="user-input-name" type="text" name="username"/>
-								<input class="user-radio" name="radioSex" type="radio" name="sex" value="1"> 
+								<span class="user-text">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+								<input class="user-input-name" type="text" name="username" id="username" />
+								<input class="user-radio" name="radioSex" type="radio" name="sex" value="1" checked="checked"> 
 								<span class="user-sex">先&nbsp;&nbsp;生</span>
 								<input class="user-radio" name="radioSex" type="radio" name="sex" value="0">
 								<span class="user-sex">小&nbsp;&nbsp;姐</span>
 							</div>
 							<div class="item">
-								<span name="userTal" class="user-text">联络电话</span>
-								<input class="user-input" type="text" name="phone"/>
+								<span class="user-text">联络电话</span>
+								<input class="user-input" type="text" name="phone" id="phone"/>
 							</div>
 							<div class="item">
-								<span name="userEmail" class="user-text">电子信箱</span>
-								<input class="user-input" type="text" name="email"/>
+								<span class="user-text">电子信箱</span>
+								<input class="user-input" type="text" name="email" id="email"/>
 							</div>
 							<div class="item">
-								<span id="userTime" name="userTime" class="user-text">预约时间</span>
-								<input class="user-input" type="text" name="appointment"/>
+								<span class="user-text">预约时间</span>
+								<input id="userTime" class="user-input" type="text" name="appointment"/>
 							</div>
 							<div class="item">
-								<span name="userConsult" class="user-text consult-time">咨询时段</span>
+								<span class="user-text consult-time">咨询时段</span>
 								<span class="container">
-									<input class="radio-icon" type="radio" name="duration" value="09:00~09:30"> 
+									<input class="radio-icon" type="radio" name="duration" value="09:00~09:30" checked="checked"> 
 									<span class="user-time">09:00~09:30</span>
 									<input class="radio-icon" type="radio" name="duration" value="10:30~11:00">
 									<span class="user-time">10:30~11:00</span>
@@ -53,42 +53,75 @@
 								</span>
 							</div>
 							<div class="item">
-								<span name="userGist" class="user-text">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;旨</span>
-								<input class="user-input" type="text" name="topic" />
+								<span class="user-text">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;旨</span>
+								<input id="topic" class="user-input" type="text" name="topic" />
 							</div>
 							<div class="item">
-								<span name="userContent" class="user-text consult-content">咨询内容</span>
-								<textarea class="user-textarea" name="content"></textarea>
+								<span class="user-text consult-content">咨询内容</span>
+								<textarea id="content" class="user-textarea" name="content"></textarea>
 							</div>
 							<div class="item">
 								<span class="code-panel">
-									<span name="userCode" class="user-text">验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
-									<input class="user-input-code" type="text" name="vcode"/>
+									<span class="user-text">验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
+									<input id="vcode" class="user-input-code" type="text" name="vcode"/>
 									<span class="warn">*请输入右方图片所显示的文字</span>
 								</span>
 								<!-- image class="code-image" src="images/code.png"></image-->
                                 <?php echo form::checkcode('checkcode', 5, 20, 130, 50, '', '', '', 'code-image'); ?>
 							</div>
 							<div class="item send-item">
-								<input class="send" type="submit" value='送&nbsp;&nbsp;&nbsp;&nbsp;出' id="dosubmit" name="dosubmit">
+								<input class="send" type="button" value='送&nbsp;&nbsp;&nbsp;&nbsp;出' id="dosubmit" name="dosubmit">
 							</div>
 						</form>
 					</div>
 				</div>
 <script type="text/javascript">
 	$(function() {
-		$('#userTime').watermark('请先来电:02-225554125dasdsad 撒大声地');
-		formvalidate('#myform', {
-				'name': {required: true, chinese: true, minlength: 2},
-				'telephone': {required: true, mobile: true},
-				'email':{email: true},
-				'address': {required: true, minlength: 10}
-			}, {
-				'name': {chinese : '请填写正确的姓名', minlength: '请填写正确的姓名'},
-				'address': {required: '请填写您的详细地址'},
-				'content': {required: '请填写加盟留言'
+		var $userTime = $('#userTime'),
+			$username = $('#username'),
+			$phone = $('#phone'),
+			$vcode = $('#vcode'),
+			$myform = $('#myform'),
+			$email = $('#email'),
+			$topic = $('#topic'),
+			$dosubmit = $('#dosubmit'),
+			$content = $('#content');
+
+		$dosubmit.on('click',doSubmit);
+
+		function doSubmit(){
+
+			if($.trim($username.val()) == ''){
+				alert('姓名不能为空!');
+			}else if(!utils.checkPhone($.trim($phone.val()))){
+				alert('电话号码格式错误!');
+			}else if(!utils.checkEmail($.trim($email.val()))){
+				alert('电子信箱格式错误!');
+			}else if(!$.validator.methods['isDate']($userTime.val(),$userTime)){
+				alert('请输入正确的日期!');
+			}else if($.trim($topic.val()) == ''){
+				alert('主旨不能为空!');
+			}else{
+				$myform[0].submit();
 			}
+		}
+
+		$.validator.addMethod("isDate", function(value, element){
+			var ereg = /^(\d{1,4})(-|\/)(\d{1,2})(-|\/)(\d{1,2})$/,
+				r = value.match(ereg);
+			if (r == null) {
+				return false;
+			}
+			return true;
 		});
+
+		$userTime.watermark('请输入正确的时间格式:YYYY-MM-DD');
+		$vcode.watermark('请输入验证码');
+		$topic.watermark('请输入主旨');
+		$content.watermark('请输入咨询内容');
+		$username.watermark('请填写正确的姓名');
+		$phone.watermark('请填写正确的电话号码');
+		$email.watermark('请填写正确的电子信箱');
 	});
 </script>
 <?php include template("content","footer"); ?>
