@@ -88,6 +88,8 @@
 			$dosubmit = $('#dosubmit'),
 			$content = $('#content');
 
+		$userTime.addClass('user-input');
+
 		$dosubmit.on('click',doSubmit);
 
 		function doSubmit(){
