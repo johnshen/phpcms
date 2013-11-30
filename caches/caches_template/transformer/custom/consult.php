@@ -31,7 +31,8 @@
 							</div>
 							<div class="item">
 								<span class="user-text">预约时间</span>
-								<input id="userTime" class="user-input" type="text" name="appointment"/>
+								<!-- input id="userTime" class="user-input" type="text" name="appointment"/-->
+                                <?php echo form::date('appointment-day'); ?>
 							</div>
 							<div class="item">
 								<span class="user-text consult-time">咨询时段</span>
@@ -77,7 +78,7 @@
 				</div>
 <script type="text/javascript">
 	$(function() {
-		var $userTime = $('#userTime'),
+		var $userTime = $('#appointment-day'),
 			$username = $('#username'),
 			$phone = $('#phone'),
 			$vcode = $('#vcode'),
@@ -87,20 +88,30 @@
 			$dosubmit = $('#dosubmit'),
 			$content = $('#content');
 
+		$userTime.addClass('user-input');
+
 		$dosubmit.on('click',doSubmit);
 
 		function doSubmit(){
 
 			if($.trim($username.val()) == ''){
-				alert('姓名不能为空!');
-			}else if(!utils.checkPhone($.trim($phone.val()))){
-				alert('电话号码格式错误!');
+				$username.focus();
+				notification.tipIn($username,'姓名不能为空!');
+			}else if($.trim($phone.val()) == ''){
+				$phone.focus();
+				notification.tipIn($phone,'电话号码不能为空!');
 			}else if(!utils.checkEmail($.trim($email.val()))){
-				alert('电子信箱格式错误!');
+				$email.focus();
+				notification.tipIn($email,'电子信箱格式错误!');
 			}else if(!$.validator.methods['isDate']($userTime.val())){
-				alert('请输入正确的日期!');
+				$userTime.focus();
+				notification.tipIn($userTime,'请输入正确的日期!');
 			}else if($.trim($topic.val()) == ''){
-				alert('主旨不能为空!');
+				$topic.focus();
+				notification.tipIn($topic,'主旨不能为空!');
+			}else if($.trim($vcode.val()) == ''){
+				$vcode.focus();
+				notification.tipIn($vcode,'验证码不能为空!');
 			}else{
 				$myform[0].submit();
 			}
