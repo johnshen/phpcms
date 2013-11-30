@@ -90,7 +90,7 @@ $LANG['ctrl_more_selected'] = 'Hold Ctrl to select multiple';
 $LANG['file_does_not_writable'] = 'Failed to write to file';
 $LANG['file_does_not_exists'] = 'File does not exists';
 $LANG['file_exists'] = 'Already exists';
-$LANG['copyright'] = 'CopyRight 2006-2011  <a href="http://www.sdo.com" target="_blank">SNDA</a> B2-20040053 <a href="http://www.phpcms.cn" target="_blank">PHPCMS TEAM</a> ';
+$LANG['copyright'] = 'Copyright@2013興望(Bring Hope)法律事務所著作權所有.Design By藍汛科技';
 $LANG['input_right'] = 'Correct';
 $LANG['update_success'] = 'Updated successfully';
 $LANG['select_all'] = 'Select all';

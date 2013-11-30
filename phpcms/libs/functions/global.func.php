@@ -624,7 +624,7 @@ function to_sqls($data, $front = ' AND ', $in_column = false) {
  * @param $array 需要传递的数组，用于增加额外的方法
  * @return 分页
  */
-function pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),$setpages = 10) {
+function mpages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),$setpages = 10) {
 	if(defined('URLRULE') && $urlrule == '') {
 		$urlrule = URLRULE;
 		$array = $GLOBALS['URL_ARRAY'];
@@ -682,6 +682,73 @@ function pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),
 		} else {
 			$multipage .= ' <a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a> <a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a>';
 		}
+	}
+	return $multipage;
+}
+
+/**
+ * 分页函数
+ *
+ * @param $num 信息总数
+ * @param $curr_page 当前分页
+ * @param $perpage 每页显示数
+ * @param $urlrule URL规则
+ * @param $array 需要传递的数组，用于增加额外的方法
+ * @return 分页
+ */
+function pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),$setpages = 5) {
+	if(defined('URLRULE') && $urlrule == '') {
+		$urlrule = URLRULE;
+		$array = $GLOBALS['URL_ARRAY'];
+	} elseif($urlrule == '') {
+		$urlrule = url_par('page={$page}');
+	}
+	$multipage = '';
+	if($num > $perpage) {
+        if ($setpages %2 == 1) {
+		    $offset = ($setpages-1)/2;
+        }else {
+            $offset = $setpages/2;
+        }
+		$pages = ceil($num / $perpage);
+		if (defined('IN_ADMIN') && !defined('PAGES')) define('PAGES', $pages);
+
+        $from = max(1, $curr_page - $offset - 1);
+        $pageRange = array_slice(range($from, $pages), 0, $setpages);
+        if (count($pageRange) < $setpages) {
+            $from = $from - ($setpages - count($pageRange));
+            $pageRange = array_slice(range($from, $pages), 0, $setpages);
+        }
+        $multipage .= '<div class="page-number">';
+        if ($curr_page == 1) {
+            $multipage .= '<span class="pre-page-max disabled"></span>';
+            $multipage .= '<span class="pre-page disabled"></span>';
+        }else {
+            $multipage .= '<a class="pre-page-max" href="'.pageurl($urlrule, 1, $array).'"></a>';
+            $multipage .= '<a class="pre-page" href="'.pageurl($urlrule, $curr_page-1, $array).'"></a>';
+        }
+        
+        $multipage .= '<ul class="page-code">';
+        foreach($pageRange as $idx => $i) {
+            $itemClass = 'page-item';
+            if ($idx == 0) {
+                $itemClass .= ' first';
+            }
+			if($i != $curr_page) {
+				$multipage .= "<li class='$itemClass'><a href='".pageurl($urlrule, $i, $array)."'>$i</a></li>";
+			} else {
+				$multipage .= "<li class='$itemClass'>[$i]</li>";
+			}
+		}
+        $multipage .= '</ul>';
+        if ($curr_page <= $pages - 1) {
+            $multipage .= '<a class="next-page" href="'.pageurl($urlrule, $curr_page+1, $array).'"></a>';
+            $multipage .= '<a class="next-page-max" href="'.pageurl($urlrule, $pages, $array).'"></a>';
+		} else {
+            $multipage .= '<span class="next-page disabled"></span>';
+            $multipage .= '<span class="next-page-max disabled"></span>';
+		}
+        $multipage .= '</div>';
 	}
 	return $multipage;
 }
