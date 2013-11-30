@@ -31,7 +31,8 @@
 							</div>
 							<div class="item">
 								<span class="user-text">预约时间</span>
-								<input id="userTime" class="user-input" type="text" name="appointment"/>
+								<!-- input id="userTime" class="user-input" type="text" name="appointment"/-->
+                                <span class="user-input"><?php echo form::date('appointment-day'); ?></span>
 							</div>
 							<div class="item">
 								<span class="user-text consult-time">咨询时段</span>
