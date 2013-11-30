@@ -1,6 +1,6 @@
 <?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header"); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>xingwang/consult.css" />
-<script language="javascript" type="text/javascript" src="<?php echo JS_PATH;?>jquery.validate.js" charset="UTF-8"></script>
+<script language="javascript" type="text/javascript" src="<?php echo JS_PATH;?>formvalidator.js" charset="UTF-8"></script>
 <style type="text/css">
 	.page-panel .send{
 		background:url(<?php echo IMG_PATH;?>xingwang/send.png);
@@ -14,23 +14,23 @@
                         <form id="myform" method="post" action="?m=custom&c=consult&a=send">
 							<div class="item">
 								<span name="userName" class="user-text">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
-								<input class="user-input-name" type="text" name="username"/>
-								<input class="user-radio" name="radioSex" type="radio" name="sex" value="1"> 
+								<input class="user-input-name" type="text" name="username" id="username" />
+								<input class="user-radio" name="radioSex" type="radio" name="sex" value="1" checked="checked"> 
 								<span class="user-sex">先&nbsp;&nbsp;生</span>
 								<input class="user-radio" name="radioSex" type="radio" name="sex" value="0">
 								<span class="user-sex">小&nbsp;&nbsp;姐</span>
 							</div>
 							<div class="item">
 								<span name="userTal" class="user-text">联络电话</span>
-								<input class="user-input" type="text" name="phone"/>
+								<input class="user-input" type="text" name="phone" id="phone"/>
 							</div>
 							<div class="item">
 								<span name="userEmail" class="user-text">电子信箱</span>
-								<input class="user-input" type="text" name="email"/>
+								<input class="user-input" type="text" name="email" id="email"/>
 							</div>
 							<div class="item">
 								<span name="userTime" class="user-text">预约时间</span>
-								<input class="user-input" type="text" name="appointment"/>
+								<input class="user-input" type="text" name="appointment_day" id="appointment_day"/>
 							</div>
 							<div class="item">
 								<span name="userConsult" class="user-text consult-time">咨询时段</span>
@@ -76,16 +76,13 @@
 				</div>
 <script type="text/javascript">
   $(function() {
-      // formvalidate('#myform', {
-      //   'name': {required: true, chinese: true, minlength: 2},
-      //   'telephone': {required: true, mobile: true},
-      //   'email':{email: true},
-      //   'address': {required: true, minlength: 10}
-      // }, {
-      //   'name': {chinese : '请填写正确的姓名', minlength: '请填写正确的姓名'},
-      //   'address': {required: '请填写您的详细地址'},
-      //   'content': {required: '请填写加盟留言'}
-      // });
+      $.formValidator.initConfig({
+          formid:"myform",
+          autotip:true,
+      });
+	$('#username').formValidator({onshow:"<?php echo L('input_username')?>",onfocus:"<?php echo L('input_username')?>",oncorrect:"<?php echo L('right_all')?>"});
+	$('#phone').formValidator({onshow:"<?php echo L('input_username')?>",onfocus:"<?php echo L('input_username')?>",oncorrect:"<?php echo L('right_all')?>"});
+	$('#email').formValidator({onshow:"<?php echo L('input_username')?>",onfocus:"<?php echo L('input_username')?>",oncorrect:"<?php echo L('right_all')?>"});
   });
 </script>
 <?php include template("content","footer"); ?>

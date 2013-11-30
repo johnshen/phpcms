@@ -35,27 +35,72 @@ class consult {
     }
 
     public function send() {
+        $_POST = $_GET;
         if (isset($_POST['dosubmit'])) {
-            //$data = array(
-            //   'subject_id'     => array2string($_POST['subjects']),
-            //   'username'       => $_POST['username'],
-            //   'telephone'      => $_POST['telephone'],
-            //   'address'        => $_POST['address'],
-            //   'qq'             => $_POST['qq'],
-            //   'ip'             => ip(),
-            //   'appointment_num'=> $_POST['appointment_num'],
-            //   'appointment_day'=> $_POST['appointment_day'],
-            //   'created_time'   => time()
-            //);
+            if ($_POST['checkcode'] != $_SESSION['code']) {
+                showmessage('请输入正确的验证码');
+            }
+            $data = array(
+               'username'       => $_POST['username'],
+               'sex'            => $_POST['sex'],
+               'phone'          => $_POST['phone'],
+               'email'          => $_POST['email'],
+               'appointment_day'=> $_POST['appointment_day'],
+               'appointment_time'=> $_POST['appointment_time'],
+               'topic'          => $_POST['topic'],
+               'content'        => $_POST['content'],
+               'createtime'     => date('Y-m-d')
+            );
 
-            $subject = 'title';//邮件的标题
-            $message = 'content';  //邮件的内容
-            $mailto='263668900@qq.com'; //接收邮件的邮箱
+            // 获取邮件模板路径
+            if(defined('SITEID')) {
+                $siteid = SITEID;
+            } else {
+                $siteid = param::get_cookie('siteid');
+            }
+            if (!$siteid) $siteid = 1;
+            $sitelist = getcache('sitelist','commons');
+            if(!empty($siteid)) {
+                $style = $sitelist[$siteid]['default_style'];
+            }
+            if(!$style) $style = 'default';
+
+		    $tplfile = PC_PATH.'templates'.DIRECTORY_SEPARATOR.$style.DIRECTORY_SEPARATOR.'custom'.DIRECTORY_SEPARATOR.'consult_mail.html';
+
+            // 邮件数据
+            $mailContext = $data;
+            if ($data['sex'] == '1') {
+                $mailContext['sexDesc'] = '先生';
+            }else {
+                $mailContext['sexDesc'] = '小姐';
+            }
+            $mailBody = file_get_contents($tplfile);
+
+            $mailReplaces = array_values($mailContext);
+            $mailFinds = array();
+            foreach($mailContext as $mailKey => $mailVal) {
+                $mailFinds[] = '{' . $mailKey.'}';
+            }
+            $mailBody = str_replace($mailFinds, $mailReplaces, $mailBody);
+            $mailto='sq6997@163.com'; //接收邮件的邮箱
             pc_base::load_sys_func('mail');
-            sendmail($mailto, $subject, $message);
+            sendmail($mailto, $data['topic'], $mailBody);
 
-            //$this->_signupModel->insert($data);
-            showmessage('申请成功,我们会尽快和您取得联系', APP_PATH);
+            //$this->db->insert($data);
+            showmessage('预约申请已经发出');
         }
     }
+
+    //public function genConsultMail() {
+    //    if (isset($_POST['sig') == false) {
+    //        die('Bad Request'); 
+    //    }
+    //    $sig = $_POST['sig'];
+    //    $data = array2string(ksort($_POST));
+    //    if (sys_auth($data, 'DECODE', 'xingwang') == '') {
+    //        die('Bad Request'); 
+    //    }
+    //    extract($_POST);
+    //    include template('custom', 'consult_mail');
+    //}
 }
