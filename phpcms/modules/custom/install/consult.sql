@@ -1,4 +1,4 @@
-CREATE TABLE `phpcms_legal_advice` (
+CREATE TABLE `phpcms_consult` (
   `id` integer unsigned NOT NULL AUTO_INCREMENT,
   `username` char(50) NOT NULL DEFAULT '' comment '姓名', 
   `sex` char(1) NOT NULL DEFAULT '1' comment '性别',

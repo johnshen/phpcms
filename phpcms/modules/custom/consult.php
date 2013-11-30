@@ -1,5 +1,6 @@
 <?php
 defined('IN_PHPCMS') or exit('No permission resources.');
+
 class consult {
     protected $db;
 
@@ -35,10 +36,12 @@ class consult {
     }
 
     public function send() {
-        $_POST = $_GET;
         if (isset($_POST['dosubmit'])) {
-            if ($_POST['checkcode'] != $_SESSION['code']) {
-                showmessage('请输入正确的验证码');
+
+            $session_storage = 'session_'.pc_base::load_config('system','session_storage');
+            pc_base::load_sys_class($session_storage);
+            if (strtolower($_POST['vcode']) != $_SESSION['code']) {
+                showmessage('请输入正确的验证码', HTTP_REFERER);
             }
             $data = array(
                'username'       => $_POST['username'],
@@ -86,8 +89,8 @@ class consult {
             pc_base::load_sys_func('mail');
             sendmail($mailto, $data['topic'], $mailBody);
 
-            //$this->db->insert($data);
-            showmessage('预约申请已经发出');
+            $this->db->insert($data);
+            showmessage('預約申請已經發送成功 ', 'index.php?m=content&c=index&a=lists&catid=2');
         }
     }
 
