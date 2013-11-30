@@ -95,12 +95,12 @@
 					<a target="_blank" class="ping icon"></a>		
 				</p>
 				<p class="panel">					
-					<a target="_blank" rel="nofollow" href="#">公司地址/壹北市中正品中山北路一段2號6樓之3</a>
+					公司地址/壹北市中正品中山北路一段2號6樓之3
 					&nbsp;|&nbsp;					
-					<a target="_blank" rel="nofollow" href="#">TEL/02-23899003</a>
+					TEL/02-23899003
 					&nbsp;|&nbsp;					
-					<a target="_blank" rel="nofollow" href="#">FAX/02-23899103</a>					&nbsp;|&nbsp;
-					<a target="_blank" rel="nofollow" href="#">E-MAIL/bringinghopelaw@gmail.com</a>
+					FAX/02-23899103					&nbsp;|&nbsp;
+					E-MAIL/bringinghopelaw@gmail.com
 				</p>
 			</div>
 		</div>
