@@ -16,6 +16,7 @@
   border-collapse: collapse;
   font: 11px "lucida grande",tahoma,verdana,sans-serif;
   line-height: 14px;
+  margin: auto;
 }
 
 .DynarchCalendar-topBar {
@@ -30,7 +31,8 @@ table.DynarchCalendar-titleCont {
   text-align: center;
   z-index: 9;
   position: relative;
-  margin-top: -6px;
+  margin-top: -3px;
+  margin-left: 79px;
 }
 
 .DynarchCalendar-title div {
