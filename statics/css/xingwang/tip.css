@@ -21,3 +21,82 @@
 	display: inline-block;
 	cursor: pointer;
 }
+
+/**********************************
+		tip的CSS样式结构
+**********************************/
+
+#tip_holder {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+    height:38px;
+    overflow:visible;
+    white-space:nowrap;
+}
+
+#tip_holder.tip_top,#tip_holder.tip_bottom {
+    padding-left:11px;
+    background-position:left -160px;
+}
+
+#tip_holder.tip_right {
+	padding-left: 16px;
+    background-position:left -76px;
+}
+
+#tip_holder.tip_left {
+	padding-right: 16px;
+    background-position:right -114px;
+}
+
+#tip_content {
+    font-size:12px;
+    line-height:40px;
+    height:38px;
+    overflow:hidden;
+    color:rgb(88,78,65);
+    text-shadow:0px 1px 0px rgba(255,255,255,0.56);
+    float: left;
+}
+
+#tip_arrow, #tip_arrow_inner {
+	position: absolute;
+	border-width: 6px;
+	height: 0;
+	width: 0;
+}
+
+#tip_holder.tip_top #tip_arrow,
+#tip_holder.tip_bottom #tip_arrow {
+    width:13px;
+    height:8px;
+}
+
+#tip_holder.tip_right #tip_arrow,
+#tip_holder.tip_left #tip_arrow {
+    display:none;
+}
+
+#tip_holder.tip_top #tip_content ,
+#tip_holder.tip_bottom #tip_content,
+#tip_holder.tip_right #tip_content {
+    padding-right:11px;
+}
+
+#tip_holder.tip_right #tip_border {
+    width: 10px;
+    height: 38px;
+    float: left;
+}
+
+#tip_holder.tip_left #tip_content {
+    float: right;
+}
+#tip_holder.tip_left #tip_border {
+    width: 10px;
+    height: 38px;
+    float: right;
+}
