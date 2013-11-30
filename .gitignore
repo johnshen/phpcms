@@ -1,1 +1,2 @@
-./cache/*
+./caches/*
+caches/caches_template*
