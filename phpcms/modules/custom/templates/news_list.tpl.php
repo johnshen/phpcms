@@ -26,7 +26,7 @@ if(is_array($data)){
         <td align="center">
             <input type="checkbox" name="id[]" value="<?php echo $news['id']?>">
         </td>
-        <td align="center" title="<?php echo $news['content']; ?>"><?php echo str_cut($news['content'], 40); ?></td>
+        <td align="center" title="<?php echo $news['content']; ?>"><?php echo str_cut($news['content'], 100); ?></td>
         <td align="center"><?php echo $news['starttime']?></td>
         <td align="center"><?php echo $news['endtime']?></td>
         <td align="center"><?php echo $news['username']?></td>
