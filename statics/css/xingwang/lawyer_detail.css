@@ -1,0 +1,72 @@
+.page-panel{
+	width: 625px;
+	display: block;
+	margin:auto;
+}
+
+.page-panel .title{
+	color: #273590;
+	font-size: 20px;
+	width: 100%;
+	margin-top:38px;	
+}
+
+.page-panel .line{
+	height: 5px;
+	width: 100%;
+	margin-top: 14px;
+}
+
+.page-panel .point-blue{
+	width:7px;
+	display: inline-block;
+	height:7px;
+}
+
+.page-panel .label{
+	margin-top: 15px;
+	font-size: 0px;
+}
+
+.page-panel .label-title{
+	font-size: 14px;
+	margin-left: 10px;
+	color:#737879;
+}
+
+.page-panel .content{
+	margin-top: 16px;
+}
+
+.page-panel .back{
+	cursor: pointer;
+	position: relative;
+	font-size: 0px;
+	width: 104px;
+	height: 34px;
+	display: block;
+	margin: auto;
+	margin-top: 36px;
+}
+
+.page-panel .icon{
+	cursor: pointer;
+	width: 13px;
+	position: relative;
+	top: 10px;
+	left: 9px;
+	height: 15px;
+	display: inline-block;
+}
+
+.page-panel .value{
+	cursor: pointer;
+	line-height: 34px;
+	font-size: 15px;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+}
