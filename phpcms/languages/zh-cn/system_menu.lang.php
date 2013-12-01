@@ -461,4 +461,5 @@ $LANG['news'] = '最新消息';
 $LANG['xingwang_news'] = '最新消息';
 $LANG['custom_news'] = '最新消息';
 $LANG['custom_news'] = '最新消息';
+$LANG['consult'] = '法律咨詢';
 ?>
