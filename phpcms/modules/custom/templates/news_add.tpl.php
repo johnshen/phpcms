@@ -39,7 +39,7 @@ $(document).ready(function(){
             }
         }
     });
-	$("#content").formValidator({autotip:true,onshow:"",onfocus:"<?php echo L('news_cannot_be_empty')?>"}).functionValidator({
+	$("#content").formValidator({autotip:true,onshow:"",onfocus:"<?php echo L('announce_cannot_be_empty')?>"}).functionValidator({
 	    fun:function(val,elem){
 	    //獲取編輯器中的內容
 		var oEditor = CKEDITOR.instances.content;

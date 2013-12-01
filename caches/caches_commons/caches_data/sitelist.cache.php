@@ -3,12 +3,12 @@ return array (
   1 => 
   array (
     'siteid' => '1',
-    'name' => '默认站点',
+    'name' => '興旺律師事務所',
     'dirname' => '',
     'domain' => 'http://local.phpcms.com/',
-    'site_title' => 'PHPCMS演示站',
-    'keywords' => 'PHPCMS演示站',
-    'description' => 'PHPCMS演示站',
+    'site_title' => '興旺律師事務所',
+    'keywords' => '興旺律師事務所',
+    'description' => '興旺律師事務所',
     'release_point' => '',
     'default_style' => 'transformer',
     'template' => 'transformer',
