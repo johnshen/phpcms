@@ -43,7 +43,7 @@ class consult {
             if (strtolower($_POST['vcode']) != $_SESSION['code']) {
                 showmessage('请输入正确的验证码', HTTP_REFERER);
             }
-            if (is_emai($_POST['email']) == false) {
+            if (is_email($_POST['email']) == false) {
                 showmessage('请输入正确的验证码', HTTP_REFERER);
             }
             $data = array(
