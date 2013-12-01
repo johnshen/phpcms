@@ -1,4 +1,17 @@
 {template "content","header"}
-	<link href="{CSS_PATH}xingwang/about.css" rel="stylesheet" type="text/css" />
-	<div id="pagePanel" class="page-panel">{$content}</div>
+    <style type="text/css">
+    .page-panel {
+        font-size: 16px;
+        color: #121718;
+        width: 500px;
+        display: block;
+        line-height: 30px;
+        margin:30px auto 0px auto;
+    }
+
+    </style>
+	<div id="pagePanel" class="page-panel">
+        {$content}
+        <div style="width: 0px; height: 0px; clear: both;"></div>
+    </div>
 {template "content","footer"}

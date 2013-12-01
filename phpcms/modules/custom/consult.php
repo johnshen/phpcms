@@ -28,6 +28,7 @@ class consult {
 		$sitelist  = getcache('sitelist','commons');
 		$default_style = $sitelist[$siteid]['default_style'];
 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
+        $CAT = $CATEGORYS['13'];
 		if(!isset($CATEGORYS[$catid])) showmessage(L('information_does_not_exist'),'blank');
         $data = $CATEGORYS[$catid];
 		extract($data);
