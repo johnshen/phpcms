@@ -162,10 +162,14 @@
 	float: left;
 }
 
+.page-panel .page-item a{
+	color: #8B9390;
+}
+
 .page-panel .page-item{
+	color: #8B9390;
 	cursor: pointer;
 	margin-left: 15px;
-	color: #8B9390;
 	float: left;
 }
 
