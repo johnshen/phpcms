@@ -18,7 +18,7 @@
 }
 
 .page-panel .name{
-	margin-left: 6px;
+	margin-left: 10px;
 	font-size: 16px;
 }
 
@@ -39,13 +39,13 @@
 }
 
 .page-panel .label.first{
-	margin-top: 24px;
+	margin-top: 30px;
 }
 
 .page-panel .point-icon{
 	width: 7px;
 	height: 7px;
-	margin-left: 35px;
+	margin-left: 25px;
 	position: relative;
 	top: -2px;
 	*top:-4px;
@@ -54,15 +54,14 @@
 
 .page-panel .line{
 	width: 100%;
-	height: 84px;
 	display: inline-block;
 }
 
 .page-panel .content{
 	display: block;
-	width: 650px;
+	width: 620px;
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 
 .page-panel .header{
@@ -76,7 +75,6 @@
 
 .page-panel .header .left,
 .page-panel .header .right{
-	width: 114px;
 	display: inline-block;
 	text-align: center;
 	font-size: 16px;
@@ -85,16 +83,18 @@
 }
 
 .page-panel .header .left{
+	width: 65px;
 	border-right: 1px solid #9A9A9A;
 }
 
 .page-panel .header .right{
+	width: 114px;
 	border-left: 1px solid #9A9A9A;
 }
 
 .page-panel .header .middle{
-	width: 418px;
-	*width: 416px;
+	width: 437px;
+	*width: 436px;
 	display: inline-block;
 	text-align: center;
 	font-size: 16px;
@@ -112,7 +112,7 @@
 
 .page-panel .item .left,
 .page-panel .item .right{
-	width: 114px;
+	
 	display: inline-block;
 	text-align: center;
 	font-size: 14px;
@@ -120,8 +120,16 @@
 	line-height: 22px;
 }
 
+.page-panel .item .left{
+	width: 65px;
+}
+
+.page-panel .item .right{
+	width: 114px;
+}
+
 .page-panel .item .middle{
-	width: 400px;
+	width: 420px;
 	display: inline-block;
 	margin-left: 20px;
 	text-align: left;
@@ -131,9 +139,7 @@
 .page-panel .page-number{
 	height: 16px;
 	line-height: 16px;
-	width: 251px;
-	margin: auto;
-	display: block;
+	display: inline-block;
 	margin-top: 17px;
 }
 
@@ -156,13 +162,26 @@
 	float: left;
 }
 
+.page-panel .page-item a{
+	color: #8B9390;
+}
+
 .page-panel .page-item{
+	color: #8B9390;
 	cursor: pointer;
 	margin-left: 15px;
-	color: #8B9390;
 	float: left;
 }
 
 .page-panel .page-item.first{
 	margin-left: 0px;
+}
+
+.page-panel .pages{
+	text-align: center;
+	display: block;
+}
+
+.page-panel .page-code{
+	float: left;
 }

@@ -37,6 +37,10 @@
 	font-size: 24px;
 }
 
+.page-panel .label.first{
+	margin-top: 24px;
+}
+
 .page-panel .point-icon{
 	width: 7px;
 	height: 7px;
@@ -49,7 +53,6 @@
 
 .page-panel .line{
 	width: 100%;
-	height: 84px;
 	display: inline-block;
 }
 
@@ -69,6 +72,11 @@
 	float: left;
 }
 
+.page-panel .content{
+	display: inline-block;
+	margin-top: 25px;
+}
+
 .page-panel .type{
 	font-size: 16px;
 	color: #576885;
@@ -85,9 +93,4 @@
 .page-panel .name{
     margin-left: 6px;
     font-size: 16px;
-}
-#container {
-    padding-top: 20px;
-    width: 700px;
-    margin: 0 auto;
 }
