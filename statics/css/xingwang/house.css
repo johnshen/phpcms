@@ -17,6 +17,11 @@
 	font-size: 0px;
 }
 
+.page-panel .title a{
+	font-weight: bolder;
+	color: #000200;
+}
+
 .page-panel .name{
 	margin-left: 10px;
 	font-size: 16px;
@@ -30,7 +35,7 @@
 
 .page-panel .label{
 	width: 100%;
-	color: #576885;
+	color: #000203;
 	line-height: 25px;
 	display: block;
 	font-size: 16px;
@@ -65,6 +70,7 @@
 }
 
 .page-panel .header{
+	color: #000203;
 	border-top: 4px solid #82AFFB;
 	border-left: 1px solid #ABBDC4;
 	border-right: 1px solid #ABBDC4;
@@ -101,9 +107,14 @@
 }
 
 .page-panel .item{
+	color: #000203;
 	border-bottom: 1px solid #C9CECF;
 	font-size: 0px;
 	height: 33px;
+}
+
+.page-panel .item a{
+	color: #000203;
 }
 
 .page-panel .item.last{
