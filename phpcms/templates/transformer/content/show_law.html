@@ -15,16 +15,14 @@
 		}
 	</style>
 	<div id="pagePanel" class="page-panel">
-		<div class="title">
-			家事法下月上路&nbsp;整合散乱程序
-		</div>
+		<div class="title">{$title}</div>
 		<div class="line"></div>
 		<div class="label">
 			<span class="point-blue"></span>
-			<span class="label-title">發佈日期:2013/09/12</span>
+			<span class="label-title">發佈日期:{date('Y/m/d', strtotime($updatetime))}</span>
 		</div>
 		<div id="content" class="content">{$content}</div>
-		<div class="back" onclick="window.history.back();">
+		<div class="back" onclick="window.location.href='<?php echo $CAT['url']; ?>';">
 			<span class="icon"></span>
 			<span class="value">BACK</span>
 		</div>
