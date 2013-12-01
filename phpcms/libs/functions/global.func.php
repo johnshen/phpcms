@@ -696,7 +696,7 @@ function pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),
  * @param $array 需要传递的数组，用于增加额外的方法
  * @return 分页
  */
-function xingwangpages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),$setpages = 5) {
+function xingwang_pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),$setpages = 5) {
 	if(defined('URLRULE') && $urlrule == '') {
 		$urlrule = URLRULE;
 		$array = $GLOBALS['URL_ARRAY'];
