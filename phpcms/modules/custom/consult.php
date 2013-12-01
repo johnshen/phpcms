@@ -43,15 +43,18 @@ class consult {
             if (strtolower($_POST['vcode']) != $_SESSION['code']) {
                 showmessage('请输入正确的验证码', HTTP_REFERER);
             }
+            if (is_email($_POST['email']) == false) {
+                showmessage('请输入正确的验证码', HTTP_REFERER);
+            }
             $data = array(
-               'username'       => $_POST['username'],
+               'username'       => remove_xss($_POST['username']),
                'sex'            => $_POST['sex'],
                'phone'          => $_POST['phone'],
                'email'          => $_POST['email'],
                'appointment_day'=> $_POST['appointment_day'],
                'appointment_time'=> $_POST['appointment_time'],
-               'topic'          => $_POST['topic'],
-               'content'        => $_POST['content'],
+               'topic'          => remove_xss($_POST['topic']),
+               'content'        => remove_xss($_POST['content']),
                'createtime'     => date('Y-m-d')
             );
 
