@@ -211,7 +211,7 @@ return array (
     'parentdir' => 'LawOfFamily/',
     'catdir' => 'LawOfMarriage',
     'url' => 'http://local.phpcms.com/index.php?m=content&c=index&a=lists&catid=8',
-    'items' => '0',
+    'items' => '1',
     'hits' => '0',
     'setting' => 'array (
   \'workflowid\' => \'\',
