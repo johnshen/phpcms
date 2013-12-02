@@ -78,6 +78,15 @@
 	text-align: center;
 }
 
+.page-music .music-desc{
+	margin-top: 20px;
+	color: #737373;
+	font-size: 14px;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: inline-block;
+}
+
 .page-music .desc span{
 	color: #9387AC;
 }

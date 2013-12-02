@@ -17,6 +17,10 @@
 	font-size: 0px;
 }
 
+.page-panel .title a{
+	color: #000203;
+}
+
 .page-panel .table{
 	height: 70px;
 	line-height: 70px;
@@ -30,7 +34,7 @@
 
 .page-panel .label{
 	width: 100%;
-	color: #576885;
+	color: #727A8F;
 	text-align: center;
 	line-height: 30px;
 	display: inline-block;
@@ -79,11 +83,11 @@
 
 .page-panel .type{
 	font-size: 16px;
-	color: #576885;
+	color: #727A8F;
 }
 
 .page-panel .content li{
-	color: #121718;
+	color: #000203;
 	font-size: 14px;
 }
 

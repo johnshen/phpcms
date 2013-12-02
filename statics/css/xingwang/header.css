@@ -23,17 +23,13 @@
 	font-size: 18px;
 }
 
-.page-header a{
-	color: #646464;
-}
-
 .page-header ul li{
 	float: left;
 	cursor: pointer;
 }
 
 .page-header a{
-	color: #646464;
+	color: #959595;
 }
 
 .page-header a:hover{
