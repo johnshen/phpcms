@@ -33,11 +33,3 @@ li{
 a{
 	text-decoration: none;
 }
-
-.point-style{
-	margin: 0px 5px;
-}
-
-.transition-animate{
-	-webkit-transition: 0.35s linear;
-}
