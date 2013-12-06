@@ -68,6 +68,15 @@ $(function(){
 
 	$("#jquery_jplayer").bind($.jPlayer.event.pause, function(event) {
 		$.cookie('musicTime',event.jPlayer.status.currentTime);
+		$('#musicSwitch').removeClass('music-off').addClass('music-on');
+	});
+
+	$("#jquery_jplayer").bind($.jPlayer.event.ended, function(event) {
+		$('#musicSwitch').removeClass('music-off').addClass('music-on');
+	});
+
+	$("#jquery_jplayer").bind($.jPlayer.event.playing, function(event) {
+		$('#musicSwitch').removeClass('music-on').addClass('music-off');
 	});
 
 	if(document.getElementById('musicAbout')){
@@ -79,10 +88,10 @@ $(function(){
 			var target = $(this);
 			if(target.hasClass('music-off')){
 				target.removeClass('music-off').addClass('music-on');
-				playMusic();
+				stopMusic();
 			}else{
 				target.removeClass('music-on').addClass('music-off');
-				stopMusic();
+				playMusic();
 			}
 			
 		});
