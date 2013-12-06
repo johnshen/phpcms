@@ -79,6 +79,7 @@
 .page-panel .content{
 	display: inline-block;
 	margin-top: 25px;
+        width: 100%;
 }
 
 .page-panel .type{
