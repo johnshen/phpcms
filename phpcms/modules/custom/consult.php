@@ -47,6 +47,11 @@ class consult {
             if (is_email($_POST['email']) == false) {
                 showmessage('请输入正确的验证码', HTTP_REFERER);
             }
+            $sql = sprintf("`appointment_day`='%s' and `appointment_time`='%s'", $_POST['appointment_day'], $_POST['appointment_time']);
+            $count = $this->db->count($sql);
+            if ($count > 0) {
+                showmessage('此時段已有人預約，請改其他時段，謝謝！');
+            }
             $data = array(
                'username'       => remove_xss($_POST['username']),
                'sex'            => $_POST['sex'],
