@@ -13,7 +13,8 @@ $(document).ready(function(){
 				$(this).jPlayer("setMedia", {
 					m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
 					oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-				}).jPlayer("play");
+				}).jPlayer("play",$.cookie('musicTime')?parseFloat($.cookie('musicTime'),10):0);
+
 			},
 			timeupdate: function(event) {
 				if(!ignore_timeupdate) {

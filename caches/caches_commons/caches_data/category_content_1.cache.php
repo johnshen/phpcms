@@ -10,7 +10,7 @@ return array (
     'arrparentid' => '0',
     'child' => '0',
     'arrchildid' => '2',
-    'catname' => '關於興旺',
+    'catname' => '關於興望',
     'style' => '',
     'image' => '',
     'description' => '',
