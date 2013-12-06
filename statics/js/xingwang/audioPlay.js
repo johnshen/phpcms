@@ -9,10 +9,9 @@ $(document).ready(function(){
 				if(event.jPlayer.status.noVolume) {
 					$(".jp-gui").addClass("jp-no-volume");
 				}
-				fixFlash_mp4 = event.jPlayer.flash.used && /m4a|m4v/.test(event.jPlayer.options.supplied);
+				fixFlash_mp4 = event.jPlayer.flash.used && /mp3/.test(event.jPlayer.options.supplied);
 				$(this).jPlayer("setMedia", {
-					m4a: imgPath+"/music.wma",
-					oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+					mp3: imgPath+"/music.mp3"
 				}).jPlayer("play",$.cookie('musicTime')?parseFloat($.cookie('musicTime'),10):0);
 
 			},
@@ -22,7 +21,7 @@ $(document).ready(function(){
 				}
 			},
 			swfPath: jsPath,
-			supplied: "m4a, oga",
+			supplied: "mp3",
 			cssSelectorAncestor: "#jp_container",
 			wmode: "window",
 			keyEnabled: true
