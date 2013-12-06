@@ -74,12 +74,18 @@ $(function(){
 		$('#musicAbout').on('click',showMusic);
 	}
 
-	if(document.getElementById('musicOn')){
-		$('#musicOn').on('click',playMusic);
-	}
-
-	if(document.getElementById('musicOff')){
-		$('#musicOff').on('click',stopMusic);
+	if(document.getElementById('musicSwitch')){
+		$('#musicSwitch').on('click',function(){
+			var target = $(this);
+			if(target.hasClass('music-off')){
+				target.removeClass('music-off').addClass('music-on');
+				playMusic();
+			}else{
+				target.removeClass('music-on').addClass('music-off');
+				stopMusic();
+			}
+			
+		});
 	}
 
 	if(document.getElementById('pageMask')){
