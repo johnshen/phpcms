@@ -410,7 +410,7 @@ return array (
   'custom' => 
   array (
     'module' => 'custom',
-    'name' => '兴旺客户管理',
+    'name' => '客户',
     'url' => 'custom/',
     'iscore' => '0',
     'version' => '1.0',

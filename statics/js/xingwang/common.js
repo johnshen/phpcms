@@ -61,6 +61,9 @@ $(function(){
 		},
 		stopMusic = function(){
 			$("#jquery_jplayer").jPlayer("stop");
+		},
+		playMusic = function(){
+			$("#jquery_jplayer").jPlayer("play");
 		};
 
 	if(document.getElementById('musicAbout')){
