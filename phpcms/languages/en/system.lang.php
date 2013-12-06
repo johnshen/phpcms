@@ -197,4 +197,5 @@ $LANG['linkage_select'] = 'Select';
 $LANG['ding_success'] = 'Make stickies successsful';
 $LANG['province'] = 'Province';
 $LANG['city'] = 'City';
+$LANG['login'] = 'Login';
 ?>
