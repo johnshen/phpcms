@@ -66,8 +66,16 @@ $(function(){
 			$("#jquery_jplayer").jPlayer("play");
 		};
 
+	$("#jquery_jplayer").bind($.jPlayer.event.pause, function(event) {
+		$.cookie('musicTime',event.jPlayer.status.currentTime);
+	});
+
 	if(document.getElementById('musicAbout')){
 		$('#musicAbout').on('click',showMusic);
+	}
+
+	if(document.getElementById('musicOn')){
+		$('#musicOn').on('click',playMusic);
 	}
 
 	if(document.getElementById('musicOff')){
@@ -77,4 +85,17 @@ $(function(){
 	if(document.getElementById('pageMask')){
 		$('#pageMask').on('click',hideMusic);
 	}
+
+	$('a').on('click',function(e){
+		var target = e.currentTarget,
+		    url = $(target).attr('data-url');
+		if(url){
+			$("#jquery_jplayer").jPlayer("pause");
+			setTimeout(function(){
+				window.location.href = url;
+			},0);
+			return false;
+		}
+		return true;
+	});
 })

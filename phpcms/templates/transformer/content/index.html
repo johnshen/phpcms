@@ -11,6 +11,7 @@
 	<link href="{CSS_PATH}xingwang/common.css" rel="stylesheet" type="text/css" />
 	<link href="{CSS_PATH}xingwang/index.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+	<script type="text/javascript" src="{JS_PATH}xingwang/cookie.js"></script>
 	<style type="text/css">
 		.page-header{
 			background: url({IMG_PATH}xingwang/index_header.png) center bottom;
@@ -36,7 +37,7 @@
 	<div id="pageIndex" class="page-index">
 		<div class="page-header"></div>
 		<div class="page-container">
-			<a href="{$CATEGORYS[2]['url']}" class="enter"></a>
+			<a data-url="{$CATEGORYS[2]['url']}" class="enter"></a>
 		</div>
 
                 <?php $news = ''; ?>
@@ -81,6 +82,20 @@
                         <?php if ($news != '') { ?>
 			messageAnimte();
                         <?php } ?>
+
+
+           	$('a').on('click',function(e){
+				var target = e.currentTarget,
+				    url = $(target).attr('data-url');
+				if(url){
+					$.cookie('musicTime',0);
+					setTimeout(function(){
+						window.location.href = url;
+					},0);
+					return false;
+				}
+				return true;
+			});
 		})
 	</script>
 </body>
