@@ -30,6 +30,7 @@
 
 .page-header a{
 	color: #959595;
+	font-size: 14px;
 }
 
 .page-header a:hover{
@@ -41,7 +42,7 @@
 }
 
 .page-header .left{
-	margin-right: 30px;
+	margin-left: 30px;
 }
 
 .page-header .right{
@@ -49,5 +50,5 @@
 }
 
 .page-header .first{
-	margin-left: 225px;
+	margin-left: 295px;
 }

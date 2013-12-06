@@ -11,7 +11,7 @@ $(document).ready(function(){
 				}
 				fixFlash_mp4 = event.jPlayer.flash.used && /m4a|m4v/.test(event.jPlayer.options.supplied);
 				$(this).jPlayer("setMedia", {
-					m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+					m4a: imgPath+"/music.wma",
 					oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
 				}).jPlayer("play",$.cookie('musicTime')?parseFloat($.cookie('musicTime'),10):0);
 
